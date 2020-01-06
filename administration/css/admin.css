@@ -1,0 +1,107 @@
+
+
+.admin_loginPage{
+    position: relative;
+    background-image: url(../bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-color: aquamarine;
+}
+
+.login{
+    position: relative;
+    background-color: #E8F5E9;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    border: 2px solid #C8E6C9;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: -20%;
+}
+
+.logo_loginPage{
+    width: 250px;
+}
+
+.form_loginPage{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 50px;
+}
+
+.text{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+
+footer{
+    background-color: #E8F5E9;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+
+/*******************************************************************/
+
+.admin_welcomePage{
+    position: relative;
+    height: auto;
+    background-color: yellow;
+    overflow-x: hidden;
+}
+.admin_menu{
+    position: relative;
+    background-color: #212121;
+    height: 10vh;
+}
+
+.admin_menu_content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.welcome{
+    color: #FAFAFA;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.vertical_menu{
+    position: absolute;
+    top: 10vh;
+    background-color: #757575;
+    height: 120vh;
+}
+
+.content_welcomePage{
+    background-color: #F5F5F5;
+    position: absolute;
+    top: 10vh;
+    height: 120vh;
+}
+
+
+/* 
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif; */

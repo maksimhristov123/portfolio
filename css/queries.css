@@ -1,0 +1,70 @@
+/*
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+*/
+@media (min-width: 576px) {
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    .lets_do_it {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .half_scr_img {
+        width: 50%;
+        height: 70vh;
+    }
+
+    .section_content {
+        width: 50%;
+        height: 70vh;
+    }
+}
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    .hero_head{
+        font-size: 7rem;
+    }
+
+
+    .serv {
+
+        height: 60vh;
+    }
+
+    .descr_serv {
+        width: 600px;
+    }
+
+    .serv_me {
+        top: -20%;
+        right: -29%;
+    }
+
+    .about_me_section {
+        height: 90vh;
+    }
+
+    .social-section,
+    .lets_do_it  {
+        height: 70vh;
+    }
+
+}
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1400px) {
+    .descr_serv {
+        width: 750px;
+    }
+
+    .serv_me {
+        right: -20%;
+    }
+}
