@@ -8,7 +8,7 @@
 
         $id = $_GET['id'];
         $sql = "UPDATE projects SET best_project= 1 WHERE project_id=".$id;
-        
+
         $result = mysqli_query($db,$sql);
         $count = mysqli_num_rows($result);
 
@@ -73,6 +73,7 @@
                         <div class="alert alert-danger">
                             <input type="hidden" name="id" value="<?php echo trim($_GET["id"]); ?>"/>
                             <p>Are you sure you want to favourite this record?</p><br>
+                            
                             <p>
                                 <input type="submit" value="Yes" class="btn btn-danger">
                                 <a href="projects.php" class="btn btn-default">No</a>

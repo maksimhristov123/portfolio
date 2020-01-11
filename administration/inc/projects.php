@@ -86,7 +86,7 @@
                         echo "<td>".$row['project_id']."</td>";
                         echo "<td>".$row['client_name']."</td>";
                         echo "<td>".$row['desc_proj']."</td>";
-                        echo "<td>".$row['link_site']."</td>";
+                        echo "<td><a href=".$row['link_site'].">".$row['link_site']."</a></td>";
                         echo "<td>".$row['year_dep']."</td>";
                         echo "<td>".$row['type_site']."</td>";
                         echo "<td>".$row['name_img']."</td>";
@@ -138,7 +138,7 @@
                         echo "<td>".$row['project_id']."</td>";
                         echo "<td>".$row['client_name']."</td>";
                         echo "<td>".$row['desc_proj']."</td>";
-                        echo "<td>".$row['link_site']."</td>";
+                        echo "<td><a href=".$row['link_site'].">".$row['link_site']."</a></td>";
                         echo "<td>".$row['year_dep']."</td>";
                         echo "<td>".$row['type_site']."</td>";
                         echo "<td>".$row['name_img']."</td>";

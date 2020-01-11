@@ -28,12 +28,16 @@
 
                         //validate year
                         $year_input = trim($_POST["year"]);
-                        if(empty($year_input)){
-                            $year_err = "Моля въведете година!";
+                        if($year_input<1990 || $year_input>2060){
+                            $year_err = "Моля въведете коректна година! Между 1990 и 2060.";
                         }else{
-                            $year = $year_input;
+                            if(empty($year_input)){
+                                $year_err = "Моля въведете година!";
+                            }else{
+                                $year = $year_input;
+                            }
                         }
-
+                        
                         //select
                         $type=$_POST["type"];
 
@@ -46,8 +50,8 @@
                         }
 
                         //UPLOAD FILES
-                        $directory = '../uploads/'.basename($_FILES['user_img']['name']);
-                        $file_name = $_FILES['user_img']['name'];
+                        $file_name = basename($_FILES['user_img']['name']);
+                        $directory = '../uploads/'.$file_name;
                         
                         if(move_uploaded_file($_FILES["user_img"]["tmp_name"],$directory)){
                             

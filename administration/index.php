@@ -50,7 +50,7 @@
     <!-- Custom js -->
     <script src="js/script.js" type="text/javascript"></script>
 
-    <title>Здравей, Максим!</title>
+    <title>Админ</title>
 </head>
 <body class="admin_loginPage">
 

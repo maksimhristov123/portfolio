@@ -131,14 +131,14 @@
                         //escape
                         $client_update = mysqli_real_escape_string($db,$client_update);
                         $desc_update = mysqli_real_escape_string($db,$desc_update);
-                        $link_update = mysqli_real_escape_string($db,$desc_update);
+                        $link_update = mysqli_real_escape_string($db,$link_update);
                         $year_update = mysqli_real_escape_string($db,$year_update);
-                        $type_update = mysqli_real_escape_string($db,$year_update);
+                        $type_update = mysqli_real_escape_string($db,$type_update);
 
                         $sql = "UPDATE projects SET client_name='$client_update', desc_proj='$desc_update', link_site='$link_update', year_dep='$year_update', type_site='$type_update' WHERE project_id=".$id;
                     
                         if(mysqli_query($db, $sql)){
-                            header("Location: ../welcome.php");
+                            header("Location: projects.php");
                             exit();
                         } else{
                             echo "ERROR UPLOAD";

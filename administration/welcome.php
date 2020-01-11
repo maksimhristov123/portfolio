@@ -49,7 +49,10 @@
                 </ul>
 
             </div>
-            <div class=" col-10 content_welcomePage">
+            <div class="col-10 content_welcomePage">
+                <div class="page_heading">
+                    <h2>Здравей, <?php echo $_SESSION['name']; ?></h2>
+                </div>
             </div>
     </div>
 </section>
