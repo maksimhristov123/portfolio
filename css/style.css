@@ -14,6 +14,7 @@ section {
 /*******************************************************BUTTONS**************************************************************/
 
 .buts{
+    font-family: 'Roboto', sans-serif;
     color: #303030;
     width: 150px;
     font-weight: 900;
@@ -317,7 +318,7 @@ section {
 }
 
 .section_heading h3{
-    font-size: calc(50px + 5vw);
+    font-size: 450%;
     font-weight: 900;
     font-family: 'Playfair Display', serif;
 }
@@ -528,6 +529,7 @@ section {
 }
 
 .section_content {
+    height: auto;
     width: 100%;
     color: #303030;
     background-color: #ecdcc9;
@@ -586,15 +588,89 @@ section {
     background-image: url(../images/baby.jpg);
 }
 
+/***************************************************************************FOOTER**************************************************************************************/
 
+footer{
+    background-color:#424242;
+}
 
+footer h4,
+footer i,
+footer ul li a{
+    color:#ecdcc9;
+}
 
+footer h4:after{
+    content:"";
+    display: block;
+    height: 1px;
+    background:linear-gradient(200deg,#BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    width: 200px;
+}
 
+footer ul{
+    list-style: none;
+}
 
+footer ul li a{
+    text-transform: uppercase;
+}
 
+footer ul li a:hover{
+    color:white;
+    text-decoration: none;
+}
 
+/************************************************************************contact*********************************************************************************/
+/* .contact_container{
+    padding: 10px;
+}
 
+.contact_container i,
+.contact_container i a{
+    padding: 10px;
+    font-size: 120%;
+    color:#707070;
+}
 
+.contact_container span{
+    padding: 10px;
+    color: #FFC500;
+    text-transform: uppercase;
+} */
+
+.varna{
+    background-image:linear-gradient( rgba(240, 237, 229, .5), rgba(240, 237, 229, .3)), url(../images/varna.jpg);
+}
+
+.section_content_ld {
+    width: 100%;
+    color: #707070;
+    background-color: #F0EDE5;
+    overflow: hidden;
+    padding: 5%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.section_content_ld .intro_ld {
+    font-weight: 900;
+    letter-spacing: 5px;
+    color: #707070;
+}
+
+.section_content_ld .heading_ld {
+    font-size: 4vmin;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+.section_content_ld .descr_ld {
+    font-size: 16px;
+    color: #707070;
+    text-transform: capitalize;
+}
 
 
 

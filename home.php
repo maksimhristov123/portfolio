@@ -10,22 +10,20 @@
 <section class="about_me_section pt-5 w-100">
     <div class="gold_bg skew_r"></div>
     <div class="row d-block d-lg-flex container w-100 mx-auto">
-        <div class="col pb-5 mb-5 text-left">
+        <div class="col pb-5 mb-5 text-left container">
             <div class="section_heading pt-5 mt-5">
                 <h3 class="text-left">Welcome<br> to<br>my<br> world!</h3>
             </div>
         </div>
-        <div class="col pb-5 mb-5">
+        <div class="col pb-5 mb-5 container">
             <!-- <div class="brown_rect dept_1 rellax"></div> -->
             <h4 class="descr pt-5 mt-5">About me!</h4>
 
             <div>
                 <p class="intro_text container text-justify pt-5 mt-5"><span>L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                 <div class="btn_cont"> <a href="?page=about" class="buts">About</a></div>
-               
             </div>
         </div>
-
     </div>
 </section>
 
@@ -62,7 +60,6 @@
             </div>
         </div>
     </div>
-
 </section>
 
 <section class="serv">

@@ -116,9 +116,9 @@
                 $sql2 = "SELECT * FROM projects  WHERE best_project = 0 ORDER BY project_id DESC";
                 //mysqli_set_charset($db,"utf8");
                 $result2 = mysqli_query($db,$sql2);
-                //$count2 = mysqli_num_rows($result2);
+                $count2 = mysqli_num_rows($result2);
 
-                if($count>0){
+                if($count2>0){
                     echo "<table class='table'>";
                     echo "<thead>";
                     echo "<tr>";

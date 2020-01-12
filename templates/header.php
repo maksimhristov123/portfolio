@@ -16,18 +16,26 @@
 
         <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto ">
-            <li class="nav-item">
-                <a class="nav-link" id="about" href="?page=about">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="what" href="?page=what">What</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="work" href="?page=work">I Work</a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="about" href="?page=about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="what" href="?page=what">What</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  href=""></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="work" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">I Work</a>
+                    <div class="dropdown-menu bg-transparent border-none">
+                        <a class="dropdown-item bg-transparent" href="?page=work">Projects</a>
+                        <a class="dropdown-item bg-transparent" href="?page=blog">Blog</a>
+                        <a class="dropdown-item bg-transparent" href="#">What next?</a>
+                    </div>
+                </li>
             </ul>
         </div>
-        <a class="contacts" href="#">Contact Me</a>
+        <a class="contacts" href="?page=contacts">Contacts</a>
     </nav>
 
     <div class="hero_content">

@@ -66,7 +66,7 @@
             </div>
             <div class=" col-10 content_welcomePage">
                 <div class="page_heading">
-                        <h2>Delete</h2>
+                        <h2>Delete favourite project</h2>
                 </div>
                 <div class="container">
                     <form method="post">

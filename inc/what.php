@@ -35,9 +35,7 @@
         </div>
         </div>
     </div>
-
-
-    
+  
 </section>
 
 <section class="lets_do_it" id="serv_1">
