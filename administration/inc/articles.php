@@ -63,65 +63,66 @@
                         <li><a href="#"><i class="fas fa-cube"></i>Blog</a></li>
                     </ul>
                 </div>
-            <div class=" col-10 content_welcomePage">
+                <div class="col-10 content_welcomePage p-5">
+                    <div class="admin_btn_group w-100 text-center my-5">
+                        <a href="create_article.php">Добавяне</a>
+                    </div>
 
-            <div class="page_heading">
-                <h2>Read</h2>
-            </div>
 
+                <div class="page_heading">
+                    <h2>All articles</h2>
+                </div>
+                <?php
 
-            <?php 
                 require_once "config.php";
-                $id=$_GET['id'];
-                echo "ID is: ".$id;
-
+                $sql3 = "SELECT * FROM articles";
                 mysqli_set_charset($db,"utf8");
-                $sql = "SELECT * FROM projects WHERE project_id=".$id;
-                $result = mysqli_query($db,$sql);
-                $count = mysqli_num_rows($result);
+                $result3 = mysqli_query($db,$sql3);
+                $count3 = mysqli_num_rows($result3);
 
-                if($count != 1){
-                    header("Location: projects.php");
-                }
-                $project = mysqli_fetch_assoc($result);
+                if($count3>0){
+                    echo "<table class='table'>";
+                    echo "<thead>";
+                    echo "<tr>";
+                    echo "<th scope='col'>#</th>";
+                    echo "<th scope='col'>Заглавие</th>";
+                    echo "<th scope='col'>Статия</th>";
+                    echo "<th scope='col'>Категория</th>";
+                    echo "<th scope='col'>Дата</th>";
+                    echo "<th scope='col'>Име/Снимка</th>";
+                    echo "<th scope='col'>Редакция</th>";
+                    echo "</tr>";
+                    echo "</thead>";
+                    echo "<tbody>";
+                    while($row = mysqli_fetch_array($result3)){
+                        echo "<tr>";
+                        echo "<td>".$row['article_id']."</td>";
+                        echo "<td>".$row['article_title']."</td>";
+                        echo "<td class='d-inline-block text-truncate' style='max-width:200px;'>".$row['article_text']."</td>";
+                        echo "<td>".$row['article_category']."</td>";
+                        echo "<td>".$row['onDate']."</td>";
+                        echo "<td class='d-inline-block text-truncate' style='max-width:200px;'>".$row['art_cover_name']."</td>";
+                        echo "<td>";
+                        echo "<div class='settings_group'>
+                                <a class='btn btn-info' href='read.php?id=".$row['project_id']."'>READ</a> 
+                                <a class='btn btn-primary' href='edit.php?id=".$row['project_id']."'>EDIT</a> 
+                                <a class='btn btn-danger' href='delete.php?id=".$row['project_id']."'>DELETE</a>
+                                <a class='btn btn-danger' href='favourite.php?id=".$row['project_id']."'><i class='far fa-star'></i></a>
 
-                $client = $project['client_name'];
-                $desc = $project['desc_proj'];
-                $link = $project['link_site'];
-                $year = $project['year_dep'];
-                $type = $project['type_site'];
-                $img ="../uploads/".$project['name_img'];
+                            </div>";
+                        echo "</td>";
+                        echo "</tr>";
+                    }
                 
-                //escaping
-                $client = mysqli_real_escape_string($db,$client);
-                $desc = mysqli_real_escape_string($db,$desc);
-                $link = mysqli_real_escape_string($db,$link);
-                $type = mysqli_real_escape_string($db,$type);
-                                
-                $content_read = "<div class='container p-5 m-5'>
-                <div class='row'>
-                    <div class='col'>
-                        <h2 class='read_heading'>Клиент: ".$client."<h2>
-                        <p class='read_descr'>Описание: ".$desc."</p>
-                        <p class='read_link'>Линк: ".$link."</p>
-                        <p class='read_year'>Година: ".$year."</p>
-                        <p class='read_type'>Тип: ".$type."</p>
-                    </div>
-                    <div class='col'>
-                        <img src=".$img." width='80%' height='80%'>     
-                    </div>
-                    
-                    
-                    <div class='admin_btn_group w-100 text-center my-5'><a href='projects.php'>Обратно</a></div>
-                    </div>
-                </div>";
-
-                echo $content_read;
+                    echo "</tbody>";
+                    echo "</table>";
+                }
                 mysqli_close($db);
-            ?>
+                ?>
             </div>
-        </div>
+    </div>
 </section>
 <footer class="w-100 p-2 fixed-bottom">
         <span>&copy; <?php echo date("Y"); ?> Maxim Hristov </span>
 </footer>
+

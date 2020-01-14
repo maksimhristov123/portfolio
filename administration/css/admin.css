@@ -1,5 +1,5 @@
 
-
+/****************************************Login Form******************************************************/
 .admin_loginPage{
     position: relative;
     background-image: url(../admin_images/bg.jpg);
@@ -53,7 +53,8 @@
 
 
 footer{
-    background-color: #E8F5E9;
+    
+    background:linear-gradient(200deg,#BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); 
     position: absolute;
     bottom: 0;
     left: 0;
@@ -62,46 +63,57 @@ footer{
 }
 
 
-/*******************************************************************/
+/**********************************DASHBOARD*********************************/
 
-.admin_welcomePage{
-    position: relative;
-    height: auto;
-    background-color: yellow;
+body{
     overflow-x: hidden;
 }
+
 .admin_menu{
-    position: relative;
-    background-color: #212121;
-    height: 10vh;
+    background:linear-gradient(to bottom,#616161,#424242);
 }
 
-.admin_menu_content{
-    display: flex;
-    justify-content: space-between;
-}
 
 .welcome{
-    color: #FAFAFA;
+    color: #9E9E9E;
     font-family: 'Roboto', sans-serif;
-}
+} 
 
 
 .vertical_menu{
-    position: absolute;
-    top: 10vh;
-    background-color: #757575;
-    height: 120vh;
+    background:#424242;
+    min-height: 100vh;
 }
 
+
+
 .content_welcomePage{
-    background-color: #F5F5F5;
-    position: absolute;
-    top: 10vh;
-    height: 120vh;
+    background:linear-gradient(200deg,#FAFAFA, #F5F5F5);
+    min-height: 100vh;
 }
+
+/***********************************************ADMIN MENU*******************************************************/
+
+.vertical_menu ul li{
+    list-style: none;
+    padding-bottom: 15px;
+}
+
+.vertical_menu i{
+    padding-right: 15px;
+    font-size: 30px;
+}
+
+.vertical_menu a,
+.vertical_menu i{
+    color: #9E9E9E;
+    font-size: 20px;
+}
+
+
 
 
 /* 
+background:linear-gradient(200deg,#BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
 font-family: 'Playfair Display', serif;
 font-family: 'Roboto', sans-serif; */

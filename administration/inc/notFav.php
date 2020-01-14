@@ -21,12 +21,15 @@
 ?>
 
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--  Global css -->
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="shortcut icon" href="favicon.ico" />
+
+    <!-- Fontawesome -->
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto&display=swap" rel="stylesheet">
@@ -42,31 +45,43 @@
     <!-- Custom js -->
     <script src="js/script.js" type="text/javascript"></script>
 
-    <title>Здравей, <?php echo $_SESSION['name']; ?>!</title>
+    <title>Здравей, <?php echo $_SESSION['full_name']; ?>!</title>
 </head>
 
-<body  class="admin_welcomePage">
+<body>
+    <nav class="navbar navbar-expand-lg admin_menu d-flex justify-content-between w-100 shadow-lg">
+        <a class="navbar-brand" href="../welcome.php" id="brand"><img src="../admin_images/me-logo.png" class="img-fluid my-2" alt="Maksim Hristov's Portfolio Logo" width="100"></a>
+        
+        <span class="navbar-text">
+            <p class="welcome my-auto pr-4">Welcome, <?php echo $_SESSION['full_name']; ?> </p>
+        </span>
+    </nav>
 
-<div>
-    <div class="admin_menu fixed-top">
-            <div class="container admin_menu_content">
-                <a class="navbar-brand" href="../welcome.php" id="brand"><img src="../admin_images/me-logo.png" alt="Maksim Hristov's Portfolio Logo" width="100"></a>
-                <p class="welcome my-auto pr-4">Welcome, <?php echo $_SESSION['name']; ?> </p>
-            </div>
-        </div>
-</div>
-<section>
-        <div class="row">
-            <div class="col-2 vertical_menu p-5">
-                <ul>
-                    <li><a href="#">Профил</a></li>
-                    <li><a href="projects.php">Проекти</a></li>
-                    <li><a href="#">Блог</a></li>
-                </ul>
-            </div>
+    <section>
+            <div class="row">
+                <div class="col-2 vertical_menu p-5 shadow-lg">
+                    <nav class="navbar">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <a href="#"><?php echo $_SESSION['full_name']; ?></a><i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                            <a class="nav-item nav-link" href="#"><i class="fas fa-user"></i>My profile</a>
+                            <a class="nav-item nav-link" href="#"><i class="fas fa-user-cog"></i>Settings</a>
+                            <a class="nav-item nav-link" href="#"><i class="fas fa-door-open"></i>Logout</a>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <ul>
+                        <li><a href="../welcome.php"><i class="fas fa-chart-pie"></i>Dashboard</a></li>
+                        <li><a href="inc/projects.php"><i class="fas fa-project-diagram"></i>Projects</a></li>
+                        <li><a href="#"><i class="fas fa-cube"></i>Blog</a></li>
+                    </ul>
+                </div>
             <div class=" col-10 content_welcomePage">
                 <div class="page_heading">
-                        <h2>Delete favourite project</h2>
+                        <h2 class="text-center p-5">Delete favourite project</h2>
                 </div>
                 <div class="container">
                     <form method="post">

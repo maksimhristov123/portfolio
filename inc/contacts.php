@@ -81,6 +81,7 @@ if (isset($_POST['submit'])) {
 </section>
 
 <section class="container my-5 py-5">
+    
     <div class="section_heading container">
         <h2>Свържете се с мен</h2>
     </div>

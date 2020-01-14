@@ -19,6 +19,7 @@
             session_start();
             $_SESSION['id'] = $row['user_id'];
             $_SESSION['name'] = $row['username'];
+            $_SESSION['full_name'] = $row['full_name'];
             header('Location: welcome.php');
             exit();
         }
