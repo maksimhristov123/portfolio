@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--  Global css -->
     <link rel="stylesheet" href="../css/admin.css">
-    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- <link rel="shortcut icon" href="favicon.ico" /> -->
 
     <!-- Fontawesome -->
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
@@ -26,8 +26,8 @@
     <!-- Bootstrap js -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <!-- Custom js -->
-    <script src="js/script.js" type="text/javascript"></script>
+    <!-- Custom js
+    <script src="js/script.js" type="text/javascript"></script> -->
 
     <title>Здравей, <?php echo $_SESSION['full_name']; ?>!</title>
 </head>

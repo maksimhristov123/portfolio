@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--  Global css -->
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="../css/admin.css">
     <!-- <link rel="shortcut icon" href="favicon.ico" /> -->
 
     <!-- Fontawesome -->
@@ -34,7 +34,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg admin_menu d-flex justify-content-between w-100 shadow-lg">
-        <a class="navbar-brand" href="#" id="brand"><img src="admin_images/me-logo.png" class="img-fluid my-2" alt="Maksim Hristov's Portfolio Logo" width="100"></a>
+        <a class="navbar-brand" href="../welcome.php" id="brand"><img src="../admin_images/me-logo.png" class="img-fluid my-2" alt="Maksim Hristov's Portfolio Logo" width="100"></a>
         
         <span class="navbar-text">
             <p class="welcome my-auto pr-4">Welcome, <?php echo $_SESSION['full_name']; ?> </p>
@@ -58,23 +58,60 @@
                     </nav>
 
                     <ul>
-                        <li><a href="#"><i class="fas fa-chart-pie"></i></i>Dashboard</a></li>
+                        <li><a href="../welcome.php"><i class="fas fa-chart-pie"></i>Dashboard</a></li>
                         <li><a href="inc/projects.php"><i class="fas fa-project-diagram"></i>Projects</a></li>
-                        <li><a href="inc/articles.php"><i class="fas fa-cube"></i>Blog</a></li>
+                        <li><a href="#"><i class="fas fa-cube"></i>Blog</a></li>
                     </ul>
+            </div>
+            <div class=" col-10 content_welcomePage">
+                <?php 
+                    require_once "config.php";
+
+                    $id = $_GET["id"];
+                    echo $id;
+                    
+                    mysqli_set_charset($db,"utf8");
+                    $sql = "SELECT * FROM articles WHERE article_id=".$id;
+
+                    $result = mysqli_query($db,$sql);
+                    $count = mysqli_num_rows($result);
+                    echo "YES: ".$count;
+
+                    //TODO EDITAAAAAAA
+                    ?>
+
+                <div class="page_heading">
+                    <h2>EDIT</h2>
                 </div>
-                <div class="col-10 content_welcomePage">
-                    <div class="page_heading">
-                        <h2>Здравей, <?php echo $_SESSION['full_name']; ?></h2>
+
+                <section class="container mt-5">
+                    <form method="POST" action="" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="art_title">Заглавие:</label>
+                        <input type="text" class="form-control" name="art_title" id="art_title" placeholder="Въведете име на статия" require>
+                        <span class="help-block"><?php echo $art_ttl_err;?></span>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="art_category">Категория:</label>
+                        <input type="text" class="form-control" name="art_category" id="art_category" placeholder="Въведете категория" require>
+                        <span class="help-block"><?php echo $art_cat_err;?></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="art_text">Текст:</label>
+                        <textarea class="form-control" name="art_text" id="art_text" rows="3" require></textarea>
+                        <span class="help-block"><?php echo $art_txt_err;?></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="art_cover">Качи снимка за корица:</label>
+                        <input type="file" class="form-control-file" name="art_cover" id="art_cover">
+                    </div>
+                    <input type="submit" name="submit" class="btn btn-primary" value="Submit">
+                    </form>
+                </section>
+
+            </div>
         </div>
-    </section>
-
-    <footer class="w-100 p-2 fixed-bottom shadow-lg">
-            <span>&copy; <?php echo date("Y"); ?> Maxim Hristov </span>
-    </footer>
-
-
-</body>
-</html>
+</section>
+<footer class="w-100 p-2 fixed-bottom">
+        <span>&copy; <?php echo date("Y"); ?> Maxim Hristov </span>
+</footer>

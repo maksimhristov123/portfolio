@@ -1,61 +1,61 @@
 
 <?php
-use phpmailer\phpmailer\phpmailer;
-require_once "phpmailer/PHPMailer.php";
-require_once "phpmailer/Exception.php";
+// use phpmailer\phpmailer\phpmailer;
+// require_once "phpmailer/PHPMailer.php";
+// require_once "phpmailer/Exception.php";
 
-//include_once 'administration/inc/config.php';
+// //include_once 'administration/inc/config.php';
 
-$number1 = mt_rand(1, 20);
-$number2 = mt_rand(1, 20);
-if (isset($_POST['submit'])) {
-    $msg = '';
-    // $email = mysqli_real_escape_string($db,$_POST['email']);
-    // $name = mysqli_real_escape_string($db,$_POST['name']);
-    // $message = mysqli_real_escape_string($db,$_POST['message']);
-    // $phone = mysqli_real_escape_string($db,$_POST['phone']);
-    // $captcha = mysqli_real_escape_string($db,$_POST['captcha_sum']);
-    // $captcha_num1 = mysqli_real_escape_string($db,$_POST['captcha_num1']);
-    // $captcha_num2 = mysqli_real_escape_string($db,$_POST['captcha_num2']);
+// $number1 = mt_rand(1, 20);
+// $number2 = mt_rand(1, 20);
+// if (isset($_POST['submit'])) {
+//     $msg = '';
+//     // $email = mysqli_real_escape_string($db,$_POST['email']);
+//     // $name = mysqli_real_escape_string($db,$_POST['name']);
+//     // $message = mysqli_real_escape_string($db,$_POST['message']);
+//     // $phone = mysqli_real_escape_string($db,$_POST['phone']);
+//     // $captcha = mysqli_real_escape_string($db,$_POST['captcha_sum']);
+//     // $captcha_num1 = mysqli_real_escape_string($db,$_POST['captcha_num1']);
+//     // $captcha_num2 = mysqli_real_escape_string($db,$_POST['captcha_num2']);
 
-    $email = $_POST['email'];
-    $name = $_POST['name'];
-    $message = $_POST['message'];
-    $phone = $_POST['phone'];
-    $captcha = $_POST['captcha_sum'];
-    $captcha_num1 = $_POST['captcha_num1'];
-    $captcha_num2 = $_POST['captcha_num2'];
+//     $email = $_POST['email'];
+//     $name = $_POST['name'];
+//     $message = $_POST['message'];
+//     $phone = $_POST['phone'];
+//     $captcha = $_POST['captcha_sum'];
+//     $captcha_num1 = $_POST['captcha_num1'];
+//     $captcha_num2 = $_POST['captcha_num2'];
 
-    if(!empty($name) || !empty($email) || !empty($message) || !empty($phone)) {
-      if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-          if (($captcha_num1 + $captcha_num2) == $captcha) {
-            if (isset($_POST['policy'])) {
-              // Send email
-              $mail = new phpmailer();
-              $mail->CharSet = 'UTF-8';
-              $mail->addAddress('maksimhristov.1990@gmail.com', 'Portfolio');
-              $mail->setFrom($email, $name, $phone);
-              $mail->Subject = "Portfolio: Запитване";
-              $mail->isHTML(true);
-              $mail->Body = $message;
-              if($mail->send()) {
-                  $msg = "Моля проверете пощата си!";
-              }else {
-                  $msg = "Възниква проблем, опитайте по късно.";
-              }
-            }else {
-              $msg = "Трябва да се съгласите с общите условия!";
-            }
-          }else {
-            $msg = "Моля въведете captcha";
-          }
-      }else {
-        $msg = "Невалиден email!";
-      }
-  }else {
-    $msg = "Полетата са задължителни!";
-  }
-}
+//     if(!empty($name) || !empty($email) || !empty($message) || !empty($phone)) {
+//       if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+//           if (($captcha_num1 + $captcha_num2) == $captcha) {
+//             if (isset($_POST['policy'])) {
+//               // Send email
+//               $mail = new phpmailer();
+//               $mail->CharSet = 'UTF-8';
+//               $mail->addAddress('maksimhristov.1990@gmail.com', 'Portfolio');
+//               $mail->setFrom($email, $name, $phone);
+//               $mail->Subject = "Portfolio: Запитване";
+//               $mail->isHTML(true);
+//               $mail->Body = $message;
+//               if($mail->send()) {
+//                   $msg = "Моля проверете пощата си!";
+//               }else {
+//                   $msg = "Възниква проблем, опитайте по късно.";
+//               }
+//             }else {
+//               $msg = "Трябва да се съгласите с общите условия!";
+//             }
+//           }else {
+//             $msg = "Моля въведете captcha";
+//           }
+//       }else {
+//         $msg = "Невалиден email!";
+//       }
+//   }else {
+//     $msg = "Полетата са задължителни!";
+//   }
+// }
 //mysqli_close($db);
 ?>
 

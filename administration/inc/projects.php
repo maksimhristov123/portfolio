@@ -59,8 +59,8 @@
 
                     <ul>
                         <li><a href="../welcome.php"><i class="fas fa-chart-pie"></i>Dashboard</a></li>
-                        <li><a href="inc/projects.php"><i class="fas fa-project-diagram"></i>Projects</a></li>
-                        <li><a href="#"><i class="fas fa-cube"></i>Blog</a></li>
+                        <li><a href="projects.php"><i class="fas fa-project-diagram"></i>Projects</a></li>
+                        <li><a href="articles.php"><i class="fas fa-cube"></i>Blog</a></li>
                     </ul>
                 </div>
                 <div class="col-10 content_welcomePage p-5">
