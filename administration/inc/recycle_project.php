@@ -1,8 +1,8 @@
 <!Doctype html>
 <html lang="bg">
 <?php 
-
     session_start();
+
     if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 
         header ("Location: error.php");
@@ -13,8 +13,7 @@
         require_once "config.php";
 
         $id = $_GET['id'];
-        $sql = "UPDATE projects SET best_project= 0 WHERE project_id=".$id;
-        
+        $sql = "UPDATE projects SET deleted_project='0' WHERE project_id=".$id;
         $result = mysqli_query($db,$sql);
         $count = mysqli_num_rows($result);
 
@@ -27,7 +26,7 @@
 ?>
 
 <head>
-    <meta charset="utf-8">
+<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--  Global css -->
@@ -83,19 +82,20 @@
 
                     <ul>
                         <li><a href="../welcome.php"><i class="fas fa-chart-pie"></i>Dashboard</a></li>
-                        <li><a href="inc/projects.php"><i class="fas fa-project-diagram"></i>Projects</a></li>
-                        <li><a href="#"><i class="fas fa-cube"></i>Blog</a></li>
+                        <li><a href="projects.php"><i class="fas fa-project-diagram"></i>Projects</a></li>
+                        <li><a href="articles.php"><i class="fas fa-cube"></i>Blog</a></li>
                     </ul>
                 </div>
             <div class=" col-10 content_welcomePage">
-                <div class="page_heading">
-                        <h2 class="text-center p-5">Delete favourite project</h2>
-                </div>
-                <div class="container">
+                <div class="container p-5">
+                    <div class="page_heading ">
+                            <h2>Restore project</h2>
+                    </div>
+
                     <form method="post">
                         <div class="alert alert-danger">
                             <input type="hidden" name="id" value="<?php echo trim($_GET["id"]); ?>"/>
-                            <p>Are you sure you want to unfavourite this record?</p><br>
+                            <p>Are you sure you want to restore this record?</p><br>
                             <p>
                                 <input type="submit" value="Yes" class="btn btn-danger">
                                 <a href="projects.php" class="btn btn-default">No</a>

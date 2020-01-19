@@ -105,6 +105,7 @@ body{
 }
 
 .vertical_menu a,
+.vertical_menu form button,
 .vertical_menu i{
     color: #9E9E9E;
     font-size: 20px;

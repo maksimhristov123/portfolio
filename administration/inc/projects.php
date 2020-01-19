@@ -2,6 +2,12 @@
 <html lang="bg">
 <?php 
     session_start();
+
+    if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
+
+        header ("Location: error.php");
+        
+    }
 ?>
 
 <head>
@@ -50,9 +56,11 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                            <a class="nav-item nav-link" href="#"><i class="fas fa-user"></i>My profile</a>
-                            <a class="nav-item nav-link" href="#"><i class="fas fa-user-cog"></i>Settings</a>
-                            <a class="nav-item nav-link" href="#"><i class="fas fa-door-open"></i>Logout</a>
+                                <a class="nav-item nav-link" href="#"><i class="fas fa-user"></i>My profile</a>
+                                <a class="nav-item nav-link" href="#"><i class="fas fa-user-cog"></i>Settings</a>
+                                <a><form action="logout.php" method="post">
+                                    <button type="submit" name="logout" class="bg-transparent border-0"><i class="fas fa-door-open"></i>Logout</button>
+                                </form></a>
                             </div>
                         </div>
                     </nav>
@@ -67,10 +75,6 @@
                     <div class="admin_btn_group w-100 text-center my-5">
                         <a href="create_proj.php">Добавяне</a>
                     </div>
-                    
-                    <div class="page_heading">
-                        <h2>Best Four</h2>
-                    </div>
 
                 <?php
                 require_once "config.php";
@@ -80,16 +84,13 @@
                 $count = mysqli_num_rows($result);
 
                 if($count>0){
-                    echo "<table class='table'>";
+                    echo "<div class='container'><div class='page_heading'><h2>Любими</h2></div><table class='table'>";
                     echo "<thead>";
                     echo "<tr>";
                     echo "<th scope='col'>#</th>";
                     echo "<th scope='col'>Клиент</th>";
-                    echo "<th scope='col'>Описание</th>";
                     echo "<th scope='col'>Линк</th>";
                     echo "<th scope='col'>Година</th>";
-                    echo "<th scope='col'>Тип</th>";
-                    echo "<th scope='col'>Име/Снимка</th>";
                     echo "<th scope='col'>Редакция</th>";
                     echo "</tr>";
                     echo "</thead>";
@@ -98,11 +99,8 @@
                         echo "<tr>";
                         echo "<td >".$row['project_id']."</td>";
                         echo "<td>".$row['client_name']."</td>";
-                        echo "<td class='d-inline-block text-truncate' style='max-width:200px;'>".$row['desc_proj']."</td>";
                         echo "<td><a href=".$row['link_site'].">".$row['link_site']."</a></td>";
                         echo "<td>".$row['year_dep']."</td>";
-                        echo "<td>".$row['type_site']."</td>";
-                        echo "<td class='d-inline-block text-truncate' style='max-width:200px;'>".$row['name_img']."</td>";
                         echo "<td>";
                         echo "<div class='settings_group'>
                                 <a class='btn btn-info' href='read.php?id=".$row['project_id']."'>READ</a> 
@@ -115,31 +113,26 @@
                     }
                 
                     echo "</tbody>";
-                    echo "</table>";
+                    echo "</table></div>";
                 }
                 ?>
 
-                <div class="page_heading">
-                    <h2>All</h2>
-                </div>
+                
                 <?php
                 
-                $sql2 = "SELECT * FROM projects  WHERE best_project = 0 ORDER BY project_id DESC";
+                $sql2 = "SELECT * FROM projects  WHERE best_project = 0 AND deleted_project='0' ORDER BY project_id DESC";
                 //mysqli_set_charset($db,"utf8");
                 $result2 = mysqli_query($db,$sql2);
                 $count2 = mysqli_num_rows($result2);
 
                 if($count2>0){
-                    echo "<table class='table'>";
+                    echo "<div class='container'><div class='page_heading'><h2>Всички</h2></div><table class='table'>";
                     echo "<thead>";
                     echo "<tr>";
                     echo "<th scope='col'>#</th>";
                     echo "<th scope='col'>Клиент</th>";
-                    echo "<th scope='col'>Описание</th>";
                     echo "<th scope='col'>Линк</th>";
                     echo "<th scope='col'>Година</th>";
-                    echo "<th scope='col'>Тип</th>";
-                    echo "<th scope='col'>Име/Снимка</th>";
                     echo "<th scope='col'>Редакция</th>";
                     echo "</tr>";
                     echo "</thead>";
@@ -148,11 +141,8 @@
                         echo "<tr>";
                         echo "<td>".$row['project_id']."</td>";
                         echo "<td>".$row['client_name']."</td>";
-                        echo "<td class='d-inline-block text-truncate' style='max-width:200px;'>".$row['desc_proj']."</td>";
                         echo "<td><a href=".$row['link_site'].">".$row['link_site']."</a></td>";
                         echo "<td>".$row['year_dep']."</td>";
-                        echo "<td>".$row['type_site']."</td>";
-                        echo "<td class='d-inline-block text-truncate' style='max-width:200px;'>".$row['name_img']."</td>";
                         echo "<td>";
                         echo "<div class='settings_group'>
                                 <a class='btn btn-info' href='read.php?id=".$row['project_id']."'>READ</a> 
@@ -166,7 +156,45 @@
                     }
                 
                     echo "</tbody>";
-                    echo "</table>";
+                    echo "</table></div>";
+                }
+
+                $sql_deleted = "SELECT * FROM projects WHERE deleted_project='1'";
+                mysqli_set_charset($db,"utf8");
+                $result_deleted = mysqli_query($db,$sql_deleted);
+                $count_deleted = mysqli_num_rows($result_deleted);
+
+                if($count_deleted>0){
+                    echo "<div class='container'><div class='page_heading'><h2>Изтрити</h2></div><table class='table'>";
+                    echo "<thead>";
+                    echo "<tr>";
+                    echo "<th scope='col'>#</th>";
+                    echo "<th scope='col'>Клиент</th>";
+                    echo "<th scope='col'>Линк</th>";
+                    echo "<th scope='col'>Година</th>";
+                    echo "<th scope='col'>Редакция</th>";
+                    echo "</tr>";
+                    echo "</thead>";
+                    echo "<tbody>";
+                    while($row_deleted = mysqli_fetch_array($result_deleted)){
+                        echo "<tr>";
+                        echo "<td>".$row_deleted['project_id']."</td>";
+                        echo "<td>".$row_deleted['client_name']."</td>";
+                        echo "<td><a href=".$row_deleted['link_site'].">".$row_deleted['link_site']."</a></td>";
+                        echo "<td>".$row_deleted['year_dep']."</td>";
+                        echo "<td>";
+                        echo "<div class='settings_group'>
+                                <a class='btn btn-info' href='read.php?id=".$row_deleted['project_id']."'>READ</a> 
+                                <a class='btn btn-primary' href='edit.php?id=".$row_deleted['project_id']."'>EDIT</a> 
+                                <a class='btn btn-danger' href='recycle_project.php?id=".$row_deleted['project_id']."'>RECYCLE</a>
+
+                            </div>";
+                        echo "</td>";
+                        echo "</tr>";
+                    }
+                
+                    echo "</tbody>";
+                    echo "</table></div>";
                 }
                 mysqli_close($db);
                 ?>

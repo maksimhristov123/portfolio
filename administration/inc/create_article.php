@@ -3,6 +3,12 @@
 <?php 
     session_start();
 
+    if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
+
+        header ("Location: error.php");
+        
+        }
+
                     require_once "config.php";
 
                     $art_ttl=$art_txt=$art_cat="";
@@ -119,7 +125,9 @@
                             <div class="navbar-nav">
                             <a class="nav-item nav-link" href="#"><i class="fas fa-user"></i>My profile</a>
                             <a class="nav-item nav-link" href="#"><i class="fas fa-user-cog"></i>Settings</a>
-                            <a class="nav-item nav-link" href="#"><i class="fas fa-door-open"></i>Logout</a>
+                            <a><form action="logout.php" method="post">
+                                    <button type="submit" name="logout" class="bg-transparent border-0"><i class="fas fa-door-open"></i>Logout</button>
+                                </form></a>
                             </div>
                         </div>
                     </nav>
@@ -168,9 +176,9 @@
 </footer>
 
 
- <!-- Tiny plugin for textarea
+ <!-- Tiny plugin for textarea -->
  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-    <script>tinymce.init({selector:'textarea'});</script> -->
+<script>tinymce.init({selector:'textarea'});</script>
 
 </body>
 </html>

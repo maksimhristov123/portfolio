@@ -14,9 +14,8 @@
     $counter=0;
     if($count>0){
         while($row = mysqli_fetch_array($result)){
-            
-
             $counter = $counter + 1;
+
             if($counter<=4){
                 if($counter%2){
                     echo '<section class="lets_do_it my-0">

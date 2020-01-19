@@ -2,6 +2,12 @@
 <html lang="bg">
 <?php 
     session_start();
+
+    if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
+
+        header ("Location: error.php");
+        
+    }
 ?>
 
 <head>
@@ -52,7 +58,9 @@
                             <div class="navbar-nav">
                             <a class="nav-item nav-link" href="#"><i class="fas fa-user"></i>My profile</a>
                             <a class="nav-item nav-link" href="#"><i class="fas fa-user-cog"></i>Settings</a>
-                            <a class="nav-item nav-link" href="#"><i class="fas fa-door-open"></i>Logout</a>
+                            <a><form action="logout.php" method="post">
+                                    <button type="submit" name="logout" class="bg-transparent border-0"><i class="fas fa-door-open"></i>Logout</button>
+                                </form></a>
                             </div>
                         </div>
                     </nav>

@@ -3,6 +3,12 @@
 
     <?php 
     session_start();
+
+    if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
+
+        header ("Location: error.php");
+        
+        }
     
             require_once "config.php";
 
@@ -16,7 +22,9 @@
                 $client_input = trim($_POST["client"]);
 
                 if(empty($client_input)){
-                    $client_err = "Моля въведете име на клиент!";
+                    $client_err .= "Моля въведете име на клиент!";
+                }elseif(strlen($client_input)>30){
+                    $client_err .= "Моля въведете име на клиент по-малко от 30 символа!";
                 }else{
                     $client =$client_input;
                 }
@@ -130,7 +138,9 @@
                             <div class="navbar-nav">
                             <a class="nav-item nav-link" href="#"><i class="fas fa-user"></i>My profile</a>
                             <a class="nav-item nav-link" href="#"><i class="fas fa-user-cog"></i>Settings</a>
-                            <a class="nav-item nav-link" href="#"><i class="fas fa-door-open"></i>Logout</a>
+                            <a><form action="logout.php" method="post">
+                                    <button type="submit" name="logout" class="bg-transparent border-0"><i class="fas fa-door-open"></i>Logout</button>
+                                </form></a>
                             </div>
                         </div>
                     </nav>
@@ -142,54 +152,55 @@
                     </ul>
                 </div>
             <div class=" col-10 content_welcomePage">
-            
-            
+                
+                <div class="container p-5">
 
-                <div class="page_heading">
-                    <h2>Create</h2>
+                    <div class="page_heading">
+                        <h2>Създай клиент</h2>
+                    </div>
+                    <section class="container mt-5">
+                        <form method="POST" action="" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="client">Клиент:</label>
+                            <input type="text" class="form-control" name="client" id="client" placeholder="Въведете име на клиент" require>
+                            <span class="help-block"><?php echo $client_err;?></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="link_to">Линк:</label>
+                            <input type="text" class="form-control" name="link_to" id="link_to" placeholder="Въведете линк към сайта" require>
+                            <span class="help-block"><?php echo $linkTo_err;?></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Година:</label>
+                            <input type="number" class="form-control" name="year" id="year" placeholder="Въведете година на пускане на сайта" require>
+                            <span class="help-block"><?php echo $year_err;?></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Тип/сайт</label>
+                            <select class="form-control" name="type" id="type">
+                                <option>Избери тип на сайт</option>
+                                <option value="Корпоративен (над 15 служители)">Корпоративен (над 15 служители)</option>
+                                <option value="Малка фирма (от 1 до 15 служители)">Малка фирма (от 1 до 15 служители)</option>
+                                <option value="Личен (Портфолио)">Личен (Портфолио)</option>
+                                <option value="Ресторант/ Кафе">Ресторант/ Кафе</option>
+                                <option value="Друго">Друго</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Описание:</label>
+                            <textarea class="form-control" name="description" id="description" rows="3" require></textarea>
+                            <span class="help-block"><?php echo $description_err;?></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="img_upl">Качи снимка на проект:</label>
+                            <input type="file" class="form-control-file" name="user_img" id="img_upl">
+                        </div>
+                        <input type="submit" name="submit" class="btn btn-primary" value="Submit">
+                        </form>
+                    </section>
                 </div>
-
-                <section class="container mt-5">
-                    <form method="POST" action="" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label for="client">Клиент:</label>
-                        <input type="text" class="form-control" name="client" id="client" placeholder="Въведете име на клиент" require>
-                        <span class="help-block"><?php echo $client_err;?></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="link_to">Линк:</label>
-                        <input type="text" class="form-control" name="link_to" id="link_to" placeholder="Въведете линк към сайта" require>
-                        <span class="help-block"><?php echo $linkTo_err;?></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="year">Година:</label>
-                        <input type="number" class="form-control" name="year" id="year" placeholder="Въведете година на пускане на сайта" require>
-                        <span class="help-block"><?php echo $year_err;?></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="type">Тип/сайт</label>
-                        <select class="form-control" name="type" id="type">
-                            <option>Избери тип на сайт</option>
-                            <option value="Корпоративен (над 15 служители)">Корпоративен (над 15 служители)</option>
-                            <option value="Малка фирма (от 1 до 15 служители)">Малка фирма (от 1 до 15 служители)</option>
-                            <option value="Личен (Портфолио)">Личен (Портфолио)</option>
-                            <option value="Ресторант/ Кафе">Ресторант/ Кафе</option>
-                            <option value="Друго">Друго</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Описание:</label>
-                        <textarea class="form-control" name="description" id="description" rows="3" require></textarea>
-                        <span class="help-block"><?php echo $description_err;?></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="img_upl">Качи снимка на проект:</label>
-                        <input type="file" class="form-control-file" name="user_img" id="img_upl">
-                    </div>
-                    <input type="submit" name="submit" class="btn btn-primary" value="Submit">
-                    </form>
-                </section>
-                </div>
+              
+        </div>
     </div>
 </section>
 <footer class="w-100 p-2 fixed-bottom">

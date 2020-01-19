@@ -3,11 +3,17 @@
 <?php 
     session_start();
 
+    if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
+
+        header ("Location: error.php");
+        
+        }
+
     if(isset($_POST['id']) && !empty($_POST['id'])){
         require_once "config.php";
 
         $id = $_GET['id'];
-        $sql = "DELETE FROM projects WHERE project_id='$id'";
+        $sql = "UPDATE projects SET best_project='0', deleted_project='1' WHERE project_id=".$id;
         $result = mysqli_query($db,$sql);
         $count = mysqli_num_rows($result);
 
@@ -67,15 +73,17 @@
                             <div class="navbar-nav">
                             <a class="nav-item nav-link" href="#"><i class="fas fa-user"></i>My profile</a>
                             <a class="nav-item nav-link" href="#"><i class="fas fa-user-cog"></i>Settings</a>
-                            <a class="nav-item nav-link" href="#"><i class="fas fa-door-open"></i>Logout</a>
+                            <a><form action="logout.php" method="post">
+                                    <button type="submit" name="logout" class="bg-transparent border-0"><i class="fas fa-door-open"></i>Logout</button>
+                                </form></a>
                             </div>
                         </div>
                     </nav>
 
                     <ul>
                         <li><a href="../welcome.php"><i class="fas fa-chart-pie"></i>Dashboard</a></li>
-                        <li><a href="inc/projects.php"><i class="fas fa-project-diagram"></i>Projects</a></li>
-                        <li><a href="#"><i class="fas fa-cube"></i>Blog</a></li>
+                        <li><a href="projects.php"><i class="fas fa-project-diagram"></i>Projects</a></li>
+                        <li><a href="articles.php"><i class="fas fa-cube"></i>Blog</a></li>
                     </ul>
                 </div>
             <div class=" col-10 content_welcomePage">

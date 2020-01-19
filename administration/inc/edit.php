@@ -2,6 +2,12 @@
 <html lang="bg">
 <?php 
     session_start();
+
+    if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
+
+        header ("Location: error.php");
+        
+    }
 ?>
 
 <head>
@@ -52,7 +58,9 @@
                             <div class="navbar-nav">
                             <a class="nav-item nav-link" href="#"><i class="fas fa-user"></i>My profile</a>
                             <a class="nav-item nav-link" href="#"><i class="fas fa-user-cog"></i>Settings</a>
-                            <a class="nav-item nav-link" href="#"><i class="fas fa-door-open"></i>Logout</a>
+                            <a><form action="logout.php" method="post">
+                                    <button type="submit" name="logout" class="bg-transparent border-0"><i class="fas fa-door-open"></i>Logout</button>
+                                </form></a>
                             </div>
                         </div>
                     </nav>
@@ -70,7 +78,7 @@
                     $id = $_GET['id'];
                     echo "Id project:".$id;
 
-                    mysqli_set_charset($db,"utf8");
+                    //mysqli_set_charset($db,"utf8");
                     $sql = "SELECT * FROM projects WHERE project_id=".$id;
                     $result = mysqli_query($db,$sql);
                     $count = mysqli_num_rows($result);
@@ -87,13 +95,7 @@
                     $year = $project['year_dep'];
                     $type = $project["type_site"];
 
-                    //escape
-                    
-                    $client = mysqli_real_escape_string($db, $client);
-                    $desc = mysqli_real_escape_string($db, $desc);
-                    $link = mysqli_real_escape_string($db, $link);
-                    $year = mysqli_real_escape_string($db, $year);
-                    $type = mysqli_real_escape_string($db, $type);
+                  
 
                     //UPDATE DATA
                     $client_update=$desc_update=$link_update=$year_update=$type_update="";
