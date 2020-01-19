@@ -7,7 +7,7 @@
 
 <body>
 
-<div class="hero">
+<div class="hero" id="top">
     <nav class="navbar navbar-expand-lg fixed-top">
         <a class="navbar-brand" href="index.php" id="brand"><img src="images/me-logo.png" alt="Maksim Hristov's Portfolio Logo" width="100"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,9 +38,9 @@
         <a class="contacts" href="?page=contacts">Contacts</a>
     </nav>
 
-    <div class="hero_content">
+    <div class="hero_content rellax">
         <p class="prof">Hello</p>
-        <h1 class="hero_head">Maxim Hristov's Portfolio</h1>
+        <h1 class="hero_head">Maxim<br> Hristov's<br> Portfolio</h1>
         <p class="slog">Web Developer and Web Designer.</p>
     </div>
 

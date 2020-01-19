@@ -12,7 +12,7 @@
 
 <!-- JS -->
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.10.0/rellax.min.js" type="text/javascript"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.10.0/rellax.min.js" type="text/javascript"></script>
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto&display=swap" rel="stylesheet">
@@ -28,7 +28,8 @@
 
 <!-- Bootstrap js -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<!-- 
-animate
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"> -->
+
+<!--animate-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"> 
+
 <title>Maksim Hristov's Portfolio</title>

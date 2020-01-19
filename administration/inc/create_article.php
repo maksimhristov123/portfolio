@@ -46,7 +46,7 @@
                         
                         //UPLOAD FILES
                         $art_file_name = basename($_FILES['art_cover']['name']);
-                        $art_directory = '../uploads/articles/'.$art_file_name;
+                        $art_directory = 'administration/uploads/articles/'.$art_file_name;
                         
                         
                         if(move_uploaded_file($_FILES["art_cover"]["tmp_name"],$art_directory)){

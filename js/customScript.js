@@ -26,10 +26,15 @@ function changeHeader(current){
     $('.prof').css("display","none");
     $('.slog').css("display","none");
     $(".hero_head").html(current);
-    $(".hero_content").css({"top":"30%", "left":"50%"});
+    $(".hero_content").css({"top":"30%", "left":"30%"});
     $(".hero").css({"height":"75vh","background-attachment":"fixed", "background-position":"bottom"});
 }
 
 function markLocation(current){
     $("#" + current ).addClass("active");
 }
+
+var rellax = new Rellax('.rellax', {
+    speed: -5,
+    center:true
+  });

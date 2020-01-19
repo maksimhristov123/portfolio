@@ -118,10 +118,11 @@ section {
 
 .hero_content{
     position: absolute;
-    top: 50%;
-    left:50%;
+    top: 40%;
+    left:10%;
     transform: translate(-50%, -50%);
-}
+    
+} 
 
 .hero_head{
     font-family: 'Playfair Display', serif;
@@ -565,7 +566,7 @@ section {
 }
 
 .card_image{
-    max-height: 250px;
+    max-height: 350px;
 }
 
 #serv_1 .half_scr_img{
@@ -680,9 +681,20 @@ footer ul li a:hover{
 /***********************************************************ARTICLE*************************************************************/
 
 .card_article{
-    width: 360px;
-    max-height: 600px;
+    width: 100%;
+    height: auto;
     margin: 0 auto;
+}
+
+/************************************************************Back To top *******************************************************/
+.back_to_top{
+    font-size: 30px;
+}
+
+.back_to_top i{
+    background:linear-gradient(#BF953F, #B38728, #AA771C,#FCF6BA);
+    color:#303030;
+    border-radius: 50%;
 }
 
 

@@ -8,7 +8,7 @@
 <div class="gold_bg skew_r"></div>
     <div class="card_container">
 
-        <div class="card-group p-1 m-1">
+        <div class="card-group p-1 m-1 animated fadeInUp">
         <div class="card m-1">
             <img src="images/dolar.jpg" class="card-img-top img-fluid card_image" alt="100$ website">
             <div class="card-body">
@@ -17,7 +17,7 @@
             <div class="btn_cont"> <a href="#serv_1" class="buts m-0">Learn more...</a></div>
             </div>
         </div>
-        <div class="card m-1">
+        <div class="card m-1 animated fadeInUp">
             <img src="images/design.jpg" class="card-img-top img-fluid card_image" alt="new website">
             <div class="card-body">
             <h5 class="card-title">New website</h5>
@@ -25,7 +25,7 @@
             <div class="btn_cont"> <a href="#serv_2" class="buts m-0">Learn more...</a></div>
             </div>
         </div>
-        <div class="card m-1">
+        <div class="card m-1 animated fadeInUp">
             <img src="images/baby.jpg" class="card-img-top img-fluid card_image" alt="renew old website">
             <div class="card-body">
             <h5 class="card-title">Renew website</h5>

@@ -10,13 +10,11 @@
 </section>
 </div>
 
-<!-- <script>
-  // Accepts any class name
-  var rellax = new Rellax('.rellax',{
-      center: true
-  });
-</script> -->
-<script src="js/customScript.js"></script>
+<div class="animated zoomIn back_to_top fixed-bottom p-3 text-center">
+    <a href="#top">
+        <i class="fas fa-angle-up p-4"></i>
+    </a>
+</div>
 
 <footer class="py-4">
     <div class="row w-100 p-2 container mx-auto">
@@ -53,3 +51,5 @@
         </div>
     </div>
 </footer>
+
+<script src="js/customScript.js"></script>
