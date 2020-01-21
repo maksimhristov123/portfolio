@@ -3,12 +3,6 @@
 
     <?php 
     session_start();
-
-    if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
-
-        header ("Location: error.php");
-        
-        }
     
             require_once "config.php";
 
@@ -23,7 +17,7 @@
 
                 if(empty($client_input)){
                     $client_err .= "Моля въведете име на клиент!";
-                }elseif(strlen($client_input)>30){
+                }elseif(strlen($client_input)>20){
                     $client_err .= "Моля въведете име на клиент по-малко от 30 символа!";
                 }else{
                     $client =$client_input;

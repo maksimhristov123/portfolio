@@ -96,6 +96,7 @@ section {
     background-color:#303030 ;
     background: linear-gradient(217deg, rgba(0,0,0,.8), rgba(0,0,0,0) ) , url("../images/me3.jpg");
     background-position: center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -548,8 +549,6 @@ section {
 }
 
 .section_content .heading {
-    font-family: 'Playfair Display', serif;
-    font-size: 5vmin;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: left;
@@ -560,6 +559,12 @@ section {
     font-weight: 500;
     color: #303030;
     font-family: 'Playfair Display', serif;
+}
+
+.section_content h2{
+    font-size: 1em;
+    letter-spacing: none;
+    height: auto;
 }
 /********************************************************************************************************************************/
 
@@ -674,6 +679,16 @@ footer ul li a:hover{
 .card_profile{
     position: relative;
     max-width: 350px;
+}
+
+.card_profile i{
+    color:#707070;
+    font-size: 25px;
+    transition:transform .6s;
+}
+
+.card_profile i:hover{
+    transform: scale(1.2);
 }
 
 .profile_img{

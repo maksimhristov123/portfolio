@@ -33,7 +33,7 @@
 /*// Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
     .hero_content{
-        top:35%;
+        top:20%;
         left:5%;
     }
 
@@ -41,7 +41,7 @@
         font-size: 7rem;
     }
 
-    .item{
+    .home_best .item{
         max-width: 650px;
     }
     .serv {
@@ -64,6 +64,10 @@
     .social-section,
     .lets_do_it  {
         height: 70vh;
+    }
+
+    .section_content h2{
+        font-size: 2.5em;
     }
 
 }

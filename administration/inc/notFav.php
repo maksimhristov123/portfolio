@@ -3,11 +3,6 @@
 <?php 
 
     session_start();
-    if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
-
-        header ("Location: error.php");
-        
-    }
 
     if(isset($_POST['id']) && !empty($_POST['id'])){
         require_once "config.php";
