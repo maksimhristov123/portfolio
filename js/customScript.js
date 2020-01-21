@@ -15,19 +15,19 @@ $(document).ready(function(){
     $(window).scroll(function(){
         if($(this).scrollTop() > 100){
             $(".navbar").css("display","none");
+            $(".back_to_top").fadeIn("slow");
             
         }else {
             $(".navbar").fadeIn("slow");
+            $(".back_to_top").fadeOut();
         }
     });
 });
 
 function changeHeader(current){
     $('.prof').css("display","none");
-    $('.slog').css("display","none");
     $(".hero_head").html(current);
-    $(".hero_content").css({"top":"30%", "left":"30%"});
-    $(".hero").css({"height":"75vh","background-attachment":"fixed", "background-position":"bottom"});
+    $(".hero").css({"height":"90vh","background-attachment":"fixed", "background-position":"bottom"});
 }
 
 function markLocation(current){
@@ -35,6 +35,5 @@ function markLocation(current){
 }
 
 var rellax = new Rellax('.rellax', {
-    speed: -5,
-    center:true
+    speed: -5
   });

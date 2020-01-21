@@ -3,10 +3,10 @@
     <li id="section-name">My place</li>
 </ul>
 
-<section class="blog py-5">
+<section class="blog py-5 px-0 px-lg-5">
     <div class="row d-block d-lg-flex">
-        <div class="colsm col-lg-8">
-            <h2 class="heading mb-5 text-center">Maxim Hristov's blog</h2>
+        <div class="col-sm col-lg-8 shadow-lg pb-5">
+            <h2 class="heading mb-5 py-5 text-center">Maxim Hristov's blog</h2>
 
             <?php 
                 require_once "administration/inc/config.php";
@@ -20,14 +20,16 @@
                 if($count>0){
                     while($row=mysqli_fetch_array($result)){
                         echo '<div class="container">
-                                <div class="card card_article mt-5 mx-auto">
+                                <div class="card card_article mt-5 mb-5 mx-auto"  data-aos="fade-down" data-aos-anchor-placement="top-bottom"  data-aos-delay="400" data-aos-offset="0">
                                     <img src="'.$row["art_dir_img"].'" class="card-img-top" alt="Cover profile photo">
                                     <div class="card-body">
                                     <p class="text-center">'.$row["article_category"].'</p>
                                     <h4 class="text-center">'.$row["article_title"].'</h4>
                                     <p class="card-text pt-3 mx-auto text-truncate">'.$row['article_text'].'</p>
                                 </div>
-                                <div class="btn_cont mx-auto"><a href="#" class="buts m-0 text-center">Learn more...</a></div>
+                                <div class="btn_cont mx-auto my-3">
+                                    <a href="?page=rArticle'.'&id='.$row["article_id"].'" class="buts m-0 text-center">Learn more...</a>
+                                </div>
                                 <hr>
                                 <p class="card-text text-center py-3 text-muted"><i>On '.$row['onDate'].'</i></p>
                             </div>
@@ -35,8 +37,8 @@
                     }
                 
                     echo '</div>
-                    <div class="col-sm col-lg-4">
-                    <div class="card card_profile mt-5 mb-5 mx-auto" style="width: 20rem;">
+                    <div class="col-sm col-lg-4  mt-5 mb-5 mt-md-0">
+                    <div class="card card_profile mx-auto shadow-lg">
                         <img src="images/profile.jpg" class="card-img-top" alt="Cover profile photo">
                         <div class="card-body">
                             <div class="text-center p-3">
@@ -54,7 +56,7 @@
                     </div>
     
                     <div class="row d-block">
-                        <h5 class="text-center latest">Latest:</h5>';
+                        <h5 class="text-center latest my-5">Latest:</h5>';
                 }
 
                         $sql_latest = "SELECT * FROM articles WHERE deleted='0' ORDER BY onDate DESC LIMIT 4";
@@ -69,15 +71,16 @@
                     
                                 if($counter<=4){
                                     echo '<div class="col">
-                                            <div class="card mb-3 mx-auto" style="width:20rem">
+                                            <div class="card mb-3 mx-auto shadow-lg">
                                                 <div class="row no-gutters">
                                                     <div class="col-md-4 my-auto">
-                                                        <img src="'.$row_late["art_dir_img"].'" class="card-img" alt="Latest articles">
+                                                        <img src="'.$row_late["art_dir_img"].'" class="card-img p-0 p-md-3" alt="Latest articles">
                                                     </div>
                                                     <div class="col-md-8">
-                                                        <div class="card-body">
+                                                        <div class="card-body h-auto">
                                                             <h5 class="card-title">'.$row_late['article_title'].'</h5>
                                                             <p class="card-text">'.$row_late['article_text'].'</p>
+                                                            <hr>
                                                             <p class="card-text"><small class="text-muted">On '.$row_late['onDate'].'</small></p>
                                                         </div>
                                                     </div>

@@ -39,21 +39,21 @@
     <div class="gold_bg skew_r"></div>
     <div class="row d-block d-lg-flex gallery mt-5">
         <div class="col container">
-            <div class="item p-1 mt-4 ">
+            <div class="item p-1 mt-4 mx-auto">
                 <h4 class="item_heading">First webpage</h4>
                 <a href="#"><img src="images/everest1.png" alt="Gallery image 2" class="img-fluid align-middle gallery_item"></a>
             </div>
-            <div class="item p-1 mt-4">
+            <div class="item p-1 mt-4 mx-auto">
                 <h4 class="item_heading">Template 1</h4>
                 <a href="#"><img src="images/endgame1.png" alt="Gallery image 2" class="img-fluid align-middle gallery_item"></a>
             </div>
         </div>
         <div class="col container">
-            <div class="item p-1 mt-4">
+            <div class="item p-1 mt-4 mx-auto">
                 <h4 class="item_heading">Fish restaurant Varna</h4>
                 <a href="#"><img src="images/fissh.png" alt="Gallery image 2" class="img-fluid align-middle gallery_item"></a>
             </div>
-            <div class="item  p-1 mt-4 ">
+            <div class="item  p-1 mt-4 mx-auto ">
 
                 <h4 class="item_heading">Rekar plast 2006</h4>
                 <a href="http://rekarplast.com/"><img src="images/rekar.png" alt="Gallery image 1" class="img-fluid align-middle gallery_item"></a>

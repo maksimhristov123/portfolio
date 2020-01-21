@@ -35,26 +35,103 @@
 <section class="cert_best">
     <div class="gold_bg skew_r"></div>
     <div class="row d-block d-lg-flex gallery mt-5">
+
         <div class="col container">
-            <div class="item mt-5">
+            <div class="item mt-5 mx-auto shadow-lg" data-toggle="modal" data-target="#productModal">
+                
                 <h4 class="item_heading">Programming Basics with C#</h4>
-                <a href="#"><img src="images/pb.jpeg" alt="Programming Basics with C# certificate" class="img-fluid align-middle gallery_item"></a>
+                <img class="img-fluid bg-white p-2 gallery_item" src="images/pb.jpeg">
             </div>
-            <div class="item mt-5 ">
-                <h4 class="item_heading">Software Technologies</h4>
-                <a href="#"><img src="images/st.jpeg" alt="Software Technologies certificate" class="img-fluid align-middle gallery_item"></a>
+
+            <!-- Modal -->
+            <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <img class="img-fluid card-img-top shadow" src="images/pb.jpeg">
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
         </div>
+
         <div class="col container">
-            <div class="item mt-5 ">
+            <div class="item mt-5 mx-auto  shadow-lg" data-toggle="modal" data-target="#productModal2">
+                
+                <h4 class="item_heading">Software Technologies</h4>
+                <img class="img-fluid align-middle gallery_item" src="images/st.jpeg">
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="productModal2" tabindex="-1" role="dialog" aria-labelledby="productModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <img class="img-fluid card-img-top shadow" src="images/st.jpeg">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col container">
+            <div class="item mt-5 mx-auto  shadow-lg" data-toggle="modal" data-target="#productModal3">
+                
                 <h4 class="item_heading">C# Advanced</h4>
-                <a href="#"><img src="images/advance.jpeg" alt="C# Advanced certificate" class="img-fluid align-middle gallery_item"></a>
+                <img class="img-fluid align-middle gallery_item" src="images/advance.jpeg">
             </div>
-            <div class="item mt-5 ">
+
+            <!-- Modal -->
+            <div class="modal fade" id="productModal3" tabindex="-1" role="dialog" aria-labelledby="productModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <img class="img-fluid card-img-top shadow" src="images/advance.jpeg">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col container">
+            <div class="item mt-5 mx-auto  shadow-lg" data-toggle="modal" data-target="#productModal4">
                 <h4 class="item_heading">C# OOP Basics</h4>
-                <a href="#"><img src="images/oop.jpeg" alt="C# OOP Basics certificate" class="img-fluid align-middle gallery_item"></a>
+                <img class="img-fluid align-middle gallery_item" src="images/oop.jpeg">
             </div>
+            <div class="modal fade" id="productModal4" tabindex="-1" role="dialog" aria-labelledby="productModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <img class="img-fluid card-img-top shadow" src="images/oop.jpeg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> 
+</section>
+
+<section class="sec_head">
+    <div class="gold_bg_hor">
+        <div class="black_bg_hor container">
+            <h3>Oбразование</h3>
         </div>
     </div>
+</section>
 
+<section class="allCourses container my-5 py-5">
+    <ul class="allCourses_list">
+        <li class="py-2">Web development 30.03.2019г. - <span>NetIt</span></li>
+        <li class="py-2">Programming Basics with JavaScript - януари 2019 - <span>SoftUni</span></li>
+        <li class="py-2">C# OOP Advanced - ноември 2018 - <span>SoftUni</span></li>
+        <li class="py-2">Programming Fundamentals - май 2018 - <span>SoftUni</span></li>
+        <li class="py-2">Комуникационна техника и технологии - <span>Технически университет - гр. Варна</span></li>
+    </ul>
 </section>

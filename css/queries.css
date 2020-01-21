@@ -5,6 +5,10 @@
 // Small devices (landscape phones, 576px and up)
 */
 @media (min-width: 576px) {
+    .hero_content{
+        top:55%;
+        left:5%;
+    }
 }
 
 /*// Medium devices (tablets, 768px and up)*/
@@ -28,13 +32,19 @@
 
 /*// Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
+    .hero_content{
+        top:35%;
+        left:5%;
+    }
+
     .hero_head{
         font-size: 7rem;
     }
 
-
+    .item{
+        max-width: 650px;
+    }
     .serv {
-
         height: 60vh;
     }
 
