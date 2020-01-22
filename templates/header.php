@@ -10,16 +10,16 @@
 <div class="hero" id="top">
     <nav class="navbar navbar-expand-lg fixed-top">
         <a class="navbar-brand" href="index.php" id="brand"><img src="images/me-logo.png" alt="Maksim Hristov's Portfolio Logo" width="100"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="mobile-menu"><?php echo file_get_contents("images/menu.svg"); ?></div>
+        <button class="navbar-toggler mobile-menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
         </button>
 
         <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto ">
-                <li class="nav-item">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item pr-md-3">
                     <a class="nav-link" id="about" href="?page=about">About</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ">
                     <a class="nav-link" id="what" href="?page=what">What</a>
                 </li>
                 <li class="nav-item">

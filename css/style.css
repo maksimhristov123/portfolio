@@ -18,6 +18,24 @@ section {
     letter-spacing: 1px;
 }
 
+@keyframes expand{
+    0%{
+        width: 0%;
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        width: 100%;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+.blured{
+    filter: blur(6px);
+}
+
 /*******************************************************BUTTONS**************************************************************/
 
 .buts{
@@ -92,6 +110,8 @@ section {
 }
 
 /*********************************************************************************************************************/
+
+
 .hero{
     background-color:#303030 ;
     background: linear-gradient(217deg, rgba(0,0,0,.8), rgba(0,0,0,0) ) , url("../images/me3.jpg");
@@ -104,10 +124,12 @@ section {
 }
 
 .mobile-menu{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     color:white;
 }
+
+
 
 .menu a,
 .contacts,
@@ -130,7 +152,6 @@ section {
     top: 30%;
     left:10%;
     transform: translate(-50%, -50%);
-    
 } 
 
 .hero_head{
@@ -143,6 +164,7 @@ section {
     -webkit-background-clip: text;
     line-height: 1;
     -webkit-text-fill-color: transparent;
+    animation: expand .8s;
 }
 
 /******************************************************************************************************************************************/
@@ -333,6 +355,8 @@ section {
     font-family: 'Playfair Display', serif;
 }
 
+
+
 .descr{
     font-size: 30px;
     margin-bottom: 40px;
@@ -410,7 +434,7 @@ section {
     bottom: 0;
     left: 2%;
     color: #303030;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
     z-index: 3;
@@ -554,6 +578,8 @@ section {
     text-align: left;
 }
 
+
+
 .section_content .descr {
     font-size: 15px;
     font-weight: 500;
@@ -574,6 +600,16 @@ section {
     height: auto;
     padding: 10%;
     overflow: hidden;
+}
+
+.what_offer .heading::after,
+.blog .heading::after {
+    content: "";
+    width: 200px;
+    display: block;
+    background-color: #303030;
+    height: 2px;
+    margin: 10px auto;
 }
 
 .card_image{

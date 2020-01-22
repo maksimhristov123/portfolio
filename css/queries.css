@@ -33,12 +33,12 @@
 /*// Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
     .hero_content{
-        top:20%;
+        top:30%;
         left:5%;
     }
 
     .hero_head{
-        font-size: 7rem;
+        font-size: 11rem;
     }
 
     .home_best .item{

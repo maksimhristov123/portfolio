@@ -22,12 +22,17 @@ $(document).ready(function(){
             $(".back_to_top").fadeOut();
         }
     });
+
+    $(".mobile-menu").click(function(){
+        $(".hero_content").toggleClass("blured");
+    });
+
 });
 
 function changeHeader(current){
     $('.prof').css("display","none");
     $(".hero_head").html(current);
-    $(".hero").css({"height":"90vh","background-attachment":"fixed", "background-position":"bottom"});
+    $(".hero").css({"height":"90vh", "background-position":"bottom", "border-bottom":"15px solid #303030","border-radius":"0px 0px 0px 250px"});
 }
 
 function markLocation(current){
@@ -35,5 +40,5 @@ function markLocation(current){
 }
 
 var rellax = new Rellax('.rellax', {
-    speed: -5
+    speed: -3
   });
