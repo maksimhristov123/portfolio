@@ -129,8 +129,6 @@ section {
     color:white;
 }
 
-
-
 .menu a,
 .contacts,
 .prof,
@@ -164,7 +162,7 @@ section {
     -webkit-background-clip: text;
     line-height: 1;
     -webkit-text-fill-color: transparent;
-    animation: expand .8s;
+    animation: expand 1s;
 }
 
 /******************************************************************************************************************************************/

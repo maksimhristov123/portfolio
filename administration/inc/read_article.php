@@ -108,7 +108,7 @@
                         <p class='read_year'>Категория: ".$category."</p>
                     </div>
                     <div class='col'>
-                        <img src=".$img." width='80%' height='80%'>     
+                        <img src=".$img." width='80%' height='400'>     
                     </div>
                     
                     

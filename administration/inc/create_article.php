@@ -3,12 +3,6 @@
 <?php 
     session_start();
 
-    if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
-
-        header ("Location: error.php");
-        
-        }
-
                     require_once "config.php";
 
                     $art_ttl=$art_txt=$art_cat="";
@@ -46,7 +40,7 @@
                         
                         //UPLOAD FILES
                         $art_file_name = basename($_FILES['art_cover']['name']);
-                        $art_directory = 'administration/uploads/articles/'.$art_file_name;
+                        $art_directory = '../uploads/articles/'.$art_file_name;
                         
                         
                         if(move_uploaded_file($_FILES["art_cover"]["tmp_name"],$art_directory)){
@@ -176,9 +170,9 @@
 </footer>
 
 
- <!-- Tiny plugin for textarea -->
+ <!-- Tiny plugin for textarea
  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-<script>tinymce.init({selector:'textarea'});</script>
+<script>tinymce.init({selector:'textarea'});</script> -->
 
 </body>
 </html>

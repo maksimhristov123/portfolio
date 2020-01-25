@@ -32,6 +32,7 @@ $(document).ready(function(){
 function changeHeader(current){
     $('.prof').css("display","none");
     $(".hero_head").html(current);
+    $(".hero_content").css({"top":"30%"})
     $(".hero").css({"height":"90vh", "background-position":"bottom", "border-bottom":"15px solid #303030","border-radius":"0px 0px 0px 250px"});
 }
 

@@ -21,7 +21,7 @@
                     while($row=mysqli_fetch_array($result)){
                         echo '<div class="container">
                                 <div class="card card_article mt-5 mb-5 mx-auto"  data-aos="fade-down" data-aos-anchor-placement="top-bottom"  data-aos-delay="400" data-aos-offset="0">
-                                    <img src="'.$row["art_dir_img"].'" class="card-img-top" alt="Cover profile photo">
+                                    <img src="administration/uploads/articles/'.$row["art_cover_name"].'" class="card-img-top" alt="Cover profile photo">
                                     <div class="card-body">
                                     <p class="text-center '.$row["article_category"].'">'.$row["article_category"].'</p>
                                     <h4 class="text-center">'.$row["article_title"].'</h4>

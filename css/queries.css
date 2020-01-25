@@ -33,7 +33,7 @@
 /*// Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
     .hero_content{
-        top:30%;
+        top:16%;
         left:5%;
     }
 
