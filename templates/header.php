@@ -40,20 +40,7 @@
 
     <div class="hero_content rellax">
         <p class="prof">Hello</p>
-        <h1 class="hero_head">Maxim<br> Hristov's<br> Portfolio</h1>
+        <h1 class="hero_head">Maxim Hristov's Portfolio</h1>
         <p class="slog">Web Developer and Web Designer.</p>
     </div>
-
 </div>
-
-<!-- 
-<div class="brown_rect dept_2 rellax"></div>
-<div class="brown_rect dept_3 rellax"></div>
-<div class="brown_rect dept_4 rellax"></div>
-<div class="brown_rect dept_5 rellax"></div>
-<div class="brown_rect dept_6 rellax"></div>
-<div class="brown_rect dept_7 rellax"></div>
-<div class="brown_rect dept_8 rellax"></div>
-<div class="brown_rect dept_9 rellax"></div> -->
-
-

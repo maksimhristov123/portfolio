@@ -3,7 +3,7 @@
     <li id="section-name">My place</li>
 </ul>
 
-<section class="blog py-5 px-0 px-lg-5">
+<section class="blog py-5 px-0 px-lg-5 mt-5">
     <div class="row d-block d-lg-flex">
         <div class="col-sm col-lg-8 shadow-lg pb-5">
             <h2 class="heading mb-5 py-5 text-center">Maxim Hristov's blog</h2>
@@ -74,12 +74,12 @@
                                             <div class="card mb-3 mx-auto shadow-lg">
                                                 <div class="row no-gutters">
                                                     <div class="col-md-4 my-auto">
-                                                        <img src="'.$row_late["art_dir_img"].'" class="card-img p-0 p-md-3" alt="Latest articles">
+                                                        <img src="administration/uploads/articles/'.$row_late["art_cover_name"].'" class="card-img p-0 p-md-3" alt="Latest articles">
                                                     </div>
                                                     <div class="col-md-8">
                                                         <div class="card-body h-auto">
                                                             <h5 class="card-title">'.$row_late['article_title'].'</h5>
-                                                            <p class="card-text">'.$row_late['article_text'].'</p>
+                                                            <p class="card-text text-truncate">'.$row_late['article_text'].'</p>
                                                             <hr>
                                                             <p class="card-text"><small class="text-muted">On '.$row_late['onDate'].'</small></p>
                                                         </div>

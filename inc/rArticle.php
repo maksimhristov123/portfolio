@@ -19,8 +19,9 @@
                 $img = $article['art_cover_name'];
                                 
                 $content_read = "
-                <ul class='breadcrumb bg-transparent d-none'>
-                    <li><a href='#' class='text-warning'>Home<i class='fas fa-angle-right'></i></a></li>
+                <ul class='breadcrumb bg-transparent'>
+                    <li><a href='#' class='text-warning pr-2'>Home<i class='fas fa-angle-right pl-2'> </i></a></li>
+                    <li><a href='?page=blog' class='text-warning pr-2'>My place<i class='fas fa-angle-right pl-2'> </i></a></li>
                     <li id='section-name'>".$title."</li>
                 </ul>
                 
@@ -56,4 +57,4 @@
 
                 echo $content_read;
                 mysqli_close($db);
-            ?>
+?>

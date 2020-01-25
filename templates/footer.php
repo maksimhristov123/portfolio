@@ -36,7 +36,6 @@
                     <p><i class="fab fa-facebook pr-3"></i>Maxim Hristov</p>
                 </div>
             </div>
-        
     </div>
     <hr>
     <div class="row container mx-auto">
@@ -50,7 +49,6 @@
                 <li class="px-5"><a href="?page=what">What</a></li>
                 <li class="px-5"><a href="?page=work">Projects</a></li>
                 <li class="px-5"><a href="?page=blog">Blog</a></li>
-
             </ul>
         </div>
     </div>

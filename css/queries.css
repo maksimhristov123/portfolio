@@ -6,8 +6,13 @@
 */
 @media (min-width: 576px) {
     .hero_content{
-        top:55%;
+        top:35%;
         left:5%;
+    }
+  
+    .fr-section{
+        background-position: center;
+        height: 50vh;
     }
 }
 
@@ -37,8 +42,12 @@
         left:5%;
     }
 
+    .section_heading h3{
+        font-size: 7.5em;
+    }
+
     .hero_head{
-        font-size: 11rem;
+        font-size: 10rem;
     }
 
     .home_best .item{
@@ -58,7 +67,7 @@
     }
 
     .about_me_section {
-        height: 70vh;
+        height: 100vh;
     }
 
     .social-section,

@@ -1,8 +1,3 @@
-<!-- <div class="brown_rect dept_10 rellax"></div>
-<div class="brown_rect dept_11 rellax"></div>
-<div class="brown_rect dept_12 rellax"></div>
-<div class="brown_rect dept_13 rellax"></div> -->
-
 <ul class="breadcrumb bg-transparent d-none">
     <li id="section-name">home</li>
 </ul>
@@ -10,15 +5,13 @@
 <section class="about_me_section pt-5 w-100">
     <div class="gold_bg skew_r"></div>
     <div class="row d-block d-lg-flex container w-100 mx-auto">
-        <div class="col pb-5 mb-5 text-left container">
+        <div class="col pb-5 mb-5">
             <div class="section_heading pt-5 mt-5">
-                <h3 class="text-left">Welcome<br> to<br>my<br> world!</h3>
+                <h3>Welcome<br> to<br>my<br> world!</h3>
             </div>
         </div>
         <div class="col pb-5 mb-5 container">
-            <!-- <div class="brown_rect dept_1 rellax"></div> -->
             <h4 class="descr pt-5 mt-5">About me!</h4>
-
             <div>
                 <p class="intro_text container text-justify pt-5 mt-5"><span>L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                 <div class="btn_cont"> <a href="?page=about" class="buts">About</a></div>
@@ -62,6 +55,12 @@
     </div>
 </section>
 
+<section class="social-section fr-section mt-5">
+    <div class="social my-auto">
+        <h3>Fully Responsive!</h3>
+    </div>
+</section>
+
 <section class="serv">
     <div class="serv_section_text container my-auto py-5">
         <p class="small_head">Create</p>
@@ -84,7 +83,7 @@
         </div>
         <div class="col pt-5 mt-5 text-left">
             <div class="section_heading">
-                <h3 class="text-left">Welcome<br> to<br>my<br> world!</h3>
+                <h3>Welcome<br> to<br>my<br> world!</h3>
             </div>
         </div>
     </div>

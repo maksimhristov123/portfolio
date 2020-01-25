@@ -137,12 +137,14 @@ section {
     color: aliceblue;
     font-size: 1.1em;
     text-transform: uppercase;
+    transition: transform 1s,color 1s;
 }
 
 .menu li a:hover,
 .contacts:hover{
     text-decoration: none;
-    color:aliceblue;
+    color:#B38728;
+    transform: scale(1.1);
 }
 
 .hero_content{
@@ -160,149 +162,12 @@ section {
     background: -webkit-linear-gradient(200deg,#BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
     background-attachment: fixed;
     -webkit-background-clip: text;
+    word-spacing: 100vw;
     line-height: 1;
     -webkit-text-fill-color: transparent;
     animation: expand 1s;
 }
 
-/******************************************************************************************************************************************/
-.brown_rect{
-    position: absolute;
-    background-color: #ecdcc9;
-    width: 60%;
-    z-index: -1;
-}
-.dept_0{
-    height: 60%;
-}
-.dept_1{
-    opacity: .7;
-    height: 60%;
-}
-
-.dept_2,
-.dept_3,
-.dept_4,
-.dept_5,
-.dept_6,
-.dept_7,
-.dept_8,
-.dept_9,
-.dept_10,
-.dept_11,
-.dept_12,
-.dept_13{
-    background-color: #cbbcab;
-    position: absolute;
-    z-index: 99999;
-}
-
-.dept_2{
-    opacity: .7;
-    height: 50px;
-    width: 50px;
-    left: 50%;
-    top:280%;
-}
-
-.dept_3{
-    opacity: .3;
-    -webkit-filter: blur(1px);
-            filter: blur(1px);
-    height: 150px;
-    width: 150px;
-    left: 40%;
-    top:440%;
-}
-
-.dept_4{
-    opacity: 1;
-    height: 20px;
-    width: 20px;
-    left: 60%;
-    top:540%;
-}
-
-.dept_5{
-    opacity: .5;
-    height: 50px;
-    width: 50px;
-    left: 60%;
-    top:140%;
-}
-
-.dept_6{
-    opacity: .5;
-    height: 50px;
-    width: 60px;
-    left: 60%;
-    top:180%;
-}
-
-.dept_7{
-    opacity: .7;
-    -webkit-filter: blur(1px);
-            filter: blur(1px);
-    -webkit-transform: rotate(55deg);
-            transform: rotate(55deg);
-    height: 150px;
-    width: 150px;
-    left: 40%;
-    top:102%;
-    z-index: -1;
-}
-
-.dept_8{
-    opacity: .7;
-    height: 50px;
-    width: 50px;
-    left: 10%;
-    top:205%;
-}
-
-.dept_9{
-    opacity: .7;
-    height: 150px;
-    width: 150px;
-    left: 30%;
-    top:145%;
-}
-
-.dept_10{
-    opacity: .3;
-    height: 90px;
-    width: 90px;
-    left: 30%;
-    top:345%;
-}
-
-.dept_11{
-    opacity: .3;
-    height: 90px;
-    width: 190px;
-    left: 23%;
-    top:445%;
-}
-
-.dept_12{
-    opacity: .9;
-    height: 50px;
-    width: 50px;
-    left: 62%;
-    top:370%;
-}
-
-.dept_13{
-    opacity: .2;
-    -webkit-filter: blur(1px);
-    filter: blur(1px);
-    -webkit-transform: rotate(55deg);
-    transform: rotate(55deg);
-    height: 50px;
-    width: 50px;
-    left: 70%;
-    top:160%;
-}
 /*****************************************************************************************************************************************/
 
 .gold_bg{
@@ -348,12 +213,11 @@ section {
 }
 
 .section_heading h3{
-    font-size: 450%;
+    font-size: 4em;
+    line-height: .8;
     font-weight: 900;
-    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
 }
-
-
 
 .descr{
     font-size: 30px;
@@ -487,6 +351,11 @@ section {
     background-size: cover;
     background-position: center;
     height: 100vh;
+}
+
+.fr-section{
+    background-image: url(../images/mockup.jpg);
+    background-position: 70vh;
 }
 
 .social-section h3{

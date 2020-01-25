@@ -32,8 +32,32 @@ $(document).ready(function(){
 function changeHeader(current){
     $('.prof').css("display","none");
     $(".hero_head").html(current);
-    $(".hero_content").css({"top":"30%"})
+    $(".hero_content").css({"top":"30%"});
     $(".hero").css({"height":"90vh", "background-position":"bottom", "border-bottom":"15px solid #303030","border-radius":"0px 0px 0px 250px"});
+
+    if(current=="about"){
+        $(".slog").html("Me");
+    }
+
+    if(current=="projects"){
+        $(".hero").css({"background":"linear-gradient(45deg, rgba(0,0,0,.7), rgba(0,0,0,.8)), url(images/projects.png)"});
+        $(".slog").html("They trust me!");
+    }
+
+    if(current=="My place"){
+        $(".hero").css({"background":"linear-gradient(45deg, rgba(0,0,0,.7), rgba(0,0,0,.8)), url(images/coffee.jpg)"});
+        $(".hero_content").css({"top":"25%"});
+        $(".slog").html("Welcome to my world!");
+    }
+
+    if(current=="what"){
+        $(".hero").css({"background":"linear-gradient(45deg, rgba(0,0,0,.7), rgba(0,0,0,.8)), url(images/what.jpg)","background-position":"center"});
+        $(".slog").html("How can I help you?");
+    }
+
+    if(current=="Contacts"){
+        $(".slog").css("display","none");
+    }
 }
 
 function markLocation(current){

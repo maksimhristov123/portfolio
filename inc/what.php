@@ -4,10 +4,8 @@
 </ul>
 
 <section class="what_offer pt-5 w-100">
-    
     <h2 class="heading my-5 pt-5 text-center">Services</h2>
     <div class="gold_bg skew_r"></div>
-
     <div class="card_container">
         <div class="card-group p-1 m-1">
             <div class="card m-1"  data-aos="fade-down" data-aos-anchor-placement="top-bottom"  data-aos-delay="300" data-aos-offset="0">
@@ -36,7 +34,6 @@
             </div>
         </div>
     </div>
-  
 </section>
 
 <section class="lets_do_it" id="serv_1">
@@ -58,16 +55,12 @@
             </div>
         </div>
         <div class="col pb-5 mb-5">
-            <!-- <div class="brown_rect dept_1 rellax"></div> -->
             <h4 class="descr pt-5 mt-5">About me!</h4>
-
             <div>
                 <p class="intro_text container text-justify pt-5 mt-5"><span>L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                 <div class="btn_cont"> <a href="?page=about" class="buts">About</a></div>
-               
             </div>
         </div>
-
     </div>
 </section>
 
@@ -90,16 +83,12 @@
             </div>
         </div>
         <div class="col pb-5 mb-5">
-            <!-- <div class="brown_rect dept_1 rellax"></div> -->
             <h4 class="descr pt-5 mt-5">About me!</h4>
-
             <div>
                 <p class="intro_text container text-justify pt-5 mt-5"><span>L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                 <div class="btn_cont"> <a href="?page=about" class="buts">About</a></div>
-               
             </div>
         </div>
-
     </div>
 </section>
 
