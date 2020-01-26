@@ -17,30 +17,30 @@
         <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item pr-md-3">
-                    <a class="nav-link" id="about" href="?page=about">About</a>
+                    <a class="nav-link" id="about" href="?page=about">За</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" id="what" href="?page=what">What</a>
+                    <a class="nav-link" id="what" href="?page=what">Какво</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link"  href=""></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="work" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">I Work</a>
+                    <a class="nav-link dropdown-toggle" id="work" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Работя</a>
                     <div class="dropdown-menu bg-transparent border-none">
-                        <a class="dropdown-item bg-transparent" href="?page=work">Projects</a>
-                        <a class="dropdown-item bg-transparent" href="?page=blog">Blog</a>
-                        <a class="dropdown-item bg-transparent" href="#">What next?</a>
+                        <a class="dropdown-item bg-transparent" href="?page=work">Опитът</a>
+                        <a class="dropdown-item bg-transparent" href="?page=blog">Блог</a>
+                        <!-- <a class="dropdown-item bg-transparent" href="#">What next?</a> -->
                     </div>
                 </li>
             </ul>
         </div>
-        <a class="contacts" href="?page=contacts">Contacts</a>
+        <a class="contacts" href="?page=contacts">Контакти</a>
     </nav>
 
     <div class="hero_content rellax">
-        <p class="prof">Hello</p>
-        <h1 class="hero_head">Maxim Hristov's Portfolio</h1>
-        <p class="slog">Web Developer and Web Designer.</p>
+        <p class="prof">Здравейте!</p>
+        <h1 class="hero_head">Аз съм Максим Христов</h1>
+        <p class="slog">Web Developer и Web Designer.</p>
     </div>
 </div>

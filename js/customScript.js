@@ -35,12 +35,12 @@ function changeHeader(current){
     $(".hero_content").css({"top":"30%"});
     $(".hero").css({"height":"90vh", "background-position":"bottom", "border-bottom":"15px solid #303030","border-radius":"0px 0px 0px 250px"});
 
-    if(current=="about"){
-        $(".slog").html("Me");
+    if(current=="За мен"){
+        $(".slog").html("Технологии, сертификати и обучение");
     }
 
     if(current=="projects"){
-        $(".hero").css({"background":"linear-gradient(45deg, rgba(0,0,0,.7), rgba(0,0,0,.8)), url(images/projects.png)"});
+        $(".hero").css({"background":"linear-gradient(45deg, rgba(0,0,0,.7), rgba(0,0,0,.8)), url(images/projects.png)","border-radius":"0px 0px 0px 0px"});
         $(".slog").html("They trust me!");
     }
 
@@ -50,9 +50,9 @@ function changeHeader(current){
         $(".slog").html("Welcome to my world!");
     }
 
-    if(current=="what"){
+    if(current=="Какво"){
         $(".hero").css({"background":"linear-gradient(45deg, rgba(0,0,0,.7), rgba(0,0,0,.8)), url(images/what.jpg)","background-position":"center"});
-        $(".slog").html("How can I help you?");
+        $(".slog").html("Как мога да бъда полезен!");
     }
 
     if(current=="Contacts"){

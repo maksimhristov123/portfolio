@@ -1,6 +1,6 @@
 <ul class="breadcrumb bg-transparent d-none">
     <li><a href="#" class="text-warning">Home<i class="fas fa-angle-right"></i></a></li>
-    <li id="section-name">about</li>
+    <li id="section-name">За мен</li>
 </ul>
 
 <div class="main">
@@ -9,13 +9,13 @@
     <div class="row d-block d-lg-flex container w-100 mx-auto">
         <div class="col pb-5 mb-5">
             <div class="section_heading pt-5 mt-5">
-                <h3>Welcome<br> to<br>my<br> world!</h3>
+                <h3>Здравейте!<br> Аз<br>съм<br> Максим!</h3>
             </div>
         </div>
         <div class="col pb-5 mb-5 container">
-            <h4 class="descr pt-5 mt-5">About me!</h4>
+            <h4 class="descr pt-5 mt-5">За мен!</h4>
             <div>
-                <p class="intro_text container text-justify pt-5 mt-5"><span>L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <p class="intro_text container text-justify pt-5 mt-5"><span>Т</span>ук ми се иска да сложа онова любимото "Lorem ipsum" или някакъв друг текст за пълнеж на страницата! Но сега е времето да покажа най-доброто от себе си! Изучавал съм C#, HTML, CSS, JavaScript, jQuery, Bootstrap, а новата ми страст - VueJs.</p>
                 <div class="btn_cont"> <a href="?page=about" class="buts">About</a></div>
             </div>
         </div>
@@ -25,7 +25,7 @@
 <section class="sec_head">
     <div class="gold_bg_hor">
         <div class="black_bg_hor container">
-            <h3>Certification</h3>
+            <h3>Сертификати</h3>
         </div>
     </div>
 </section>

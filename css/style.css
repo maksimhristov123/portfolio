@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 span{
     font-size: 30px;
     font-weight: bold;
@@ -31,7 +35,6 @@ section {
     }
 }
 
-
 .blured{
     filter: blur(6px);
 }
@@ -47,7 +50,6 @@ section {
     padding: 10px 0px;
     margin-left: 15px;
 }
-
 .buts:hover{
     text-decoration: none;
     color: #303030;
@@ -74,6 +76,21 @@ section {
     width: 150px;
     background-color:#303030;
     opacity: .5;
+}
+
+.buts_white{
+    color: white;
+}
+.buts_white:hover{
+    color: white;
+}
+
+.buts_white::before{
+    background-color:white;
+}
+
+.buts_white::after{
+    background-color:white;
 }
 
 .buts:hover::after{
@@ -163,7 +180,7 @@ section {
     background-attachment: fixed;
     -webkit-background-clip: text;
     word-spacing: 100vw;
-    line-height: 1;
+    line-height: .86;
     -webkit-text-fill-color: transparent;
     animation: expand 1s;
 }
@@ -214,7 +231,7 @@ section {
 
 .section_heading h3{
     font-size: 4em;
-    line-height: .8;
+    line-height: 1;
     font-weight: 900;
     text-transform: uppercase;
 }
@@ -337,10 +354,11 @@ section {
 .serv_me{
     position: absolute;
     top: 5%;
-    right: -40%;
+    right: -35%;
     -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
     max-height: 1000px;
+    overflow: hidden;
 }
 
 /******************************************************************Social*/
@@ -629,6 +647,39 @@ footer ul li a:hover{
     border-radius: 50%;
 }
 
+/************************************************************Projects *******************************************************/
+.project{
+    position: relative;
+    border-bottom: 50vh solid #303030;
+}
+
+.project_image_container{
+    position: relative;
+    display: block;
+}
+
+.project_image{
+    height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(1);
+}
+
+.project_info{
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    color: #F0EDE5;
+}
+
+/* .project_heading,
+.project_intro,
+.project_descr{
+    display: none;
+} */
 
 /* 
 font-family: 'Playfair Display', serif;
