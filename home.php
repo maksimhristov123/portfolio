@@ -38,8 +38,12 @@
                 <a href="#"><img src="images/everest1.png" alt="Gallery image 2" class="img-fluid align-middle gallery_item"></a>
             </div>
             <div class="item p-1 mt-4 mx-auto"  data-aos="fade-right" data-aos-duration="1500">
-                <h4 class="item_heading">Template 1</h4>
-                <a href="#"><img src="images/endgame1.png" alt="Gallery image 2" class="img-fluid align-middle gallery_item"></a>
+                <h4 class="item_heading">Ultimatum Barber Shop</h4>
+                <a href="#"><img src="images/ultimatum.png" alt="Gallery image 2" class="img-fluid align-middle gallery_item"></a>
+            </div>
+            <div class="item p-1 mt-4 mx-auto"  data-aos="fade-right" data-aos-duration="1500">
+                <h4 class="item_heading">UX/UI Designs</h4>
+                <a href="#"><img src="images/ux.jpg" alt="Gallery image 2" class="img-fluid align-middle gallery_item"></a>
             </div>
         </div>
         <div class="col container">
@@ -50,6 +54,10 @@
             <div class="item p-1 mt-4 mx-auto" data-aos="fade-left" data-aos-duration="1500">
                 <h4 class="item_heading">Rekar plast 2006</h4>
                 <a href="http://rekarplast.com/"><img src="images/rekar.png" alt="Gallery image 1" class="img-fluid align-middle gallery_item"></a>
+            </div>
+            <div class="item p-1 mt-4 mx-auto" data-aos="fade-left" data-aos-duration="1500">
+                <h4 class="item_heading">EndGame</h4>
+                <a href="http://rekarplast.com/"><img src="images/endgame1.png" alt="Gallery image 1" class="img-fluid align-middle gallery_item"></a>
             </div>
         </div>
     </div>

@@ -20,16 +20,16 @@
                     echo '<section class="project my-0">
                             <div class="project_image_container">
                                 <div class="project_image" style="background-image:url(administration/uploads/'.$row["name_img"].')"></div> 
-                            </div>
-                            <div class="project_info" data-aos="zoom-in">
-                                <div class="project_content text-center">
-                                    <p class="project_intro">'.$row["year_dep"].'</p>
-                                    <h2 class="project_heading">'.$row["client_name"].'</h2>
-                                    <p class="project_descr">'.$row["desc_proj"].'</p>
+                                <div class="project_info m-0 m-md-5" data-aos="zoom-in">
+                                    <div class="project_content container text-center">
+                                        <p class="project_intro">'.$row["year_dep"].'</p>
+                                        <h2 class="project_heading">'.$row["client_name"].'</h2>
+                                        <p class="project_descr">'.$row["desc_proj"].'</p>
+                                    </div>
+                                    <div class="btn_cont my-auto"> <a href="http://'.$row['link_site'].'" class="buts buts_white">'.$row["client_name"].'</a></div>
                                 </div>
-                                <div class="btn_cont my-auto"> <a href="http://'.$row['link_site'].'" class="buts buts_white">'.$row["client_name"].'</a></div>
                             </div>
-                           
+                                                     
                           </section>';
             }else{
                 return;

@@ -4,7 +4,7 @@
         <h3>Последвайте ме:</h3>
         <div class="social-icons">
             <a href="https://www.facebook.com/maxim.hristov.7"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="far fa-envelope"></i></a>
+            <a href="mailto:maxim.1990@abv.bg"><i class="far fa-envelope"></i></a>
         </div>
     </div>
 </section>

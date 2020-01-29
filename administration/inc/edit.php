@@ -2,12 +2,6 @@
 <html lang="bg">
 <?php 
     session_start();
-
-    if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
-
-        header ("Location: error.php");
-        
-    }
 ?>
 
 <head>
@@ -143,14 +137,14 @@
                             $desc_update = $desc_input;
                         }
 
-                        mysqli_set_charset($db,"utf8");
+                        
                         //escape
                         $client_update = mysqli_real_escape_string($db,$client_update);
                         $desc_update = mysqli_real_escape_string($db,$desc_update);
                         $link_update = mysqli_real_escape_string($db,$link_update);
                         $year_update = mysqli_real_escape_string($db,$year_update);
                         $type_update = mysqli_real_escape_string($db,$type_update);
-
+                        mysqli_set_charset($db,"utf8");
                         $sql = "UPDATE projects SET client_name='$client_update', desc_proj='$desc_update', link_site='$link_update', year_dep='$year_update', type_site='$type_update' WHERE project_id=".$id;
                     
                         if(mysqli_query($db, $sql)){
