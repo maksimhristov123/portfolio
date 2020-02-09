@@ -35,29 +35,29 @@
         <div class="col container">
             <div class="item p-1 mt-4 mx-auto"  data-aos="fade-right" data-aos-duration="1500">
                 <h4 class="item_heading">First webpage</h4>
-                <a href="#"><img src="images/everest1.png" alt="Gallery image 2" class="img-fluid align-middle gallery_item"></a>
+                <img src="images/everest1.png" alt="Gallery image 2" class="img-fluid align-middle gallery_item">
             </div>
             <div class="item p-1 mt-4 mx-auto"  data-aos="fade-right" data-aos-duration="1500">
                 <h4 class="item_heading">Ultimatum Barber Shop</h4>
-                <a href="#"><img src="images/ultimatum.png" alt="Gallery image 2" class="img-fluid align-middle gallery_item"></a>
+                <img src="images/ultimatum.png" alt="Gallery image 2" class="img-fluid align-middle gallery_item">
             </div>
             <div class="item p-1 mt-4 mx-auto"  data-aos="fade-right" data-aos-duration="1500">
                 <h4 class="item_heading">UX/UI Designs</h4>
-                <a href="#"><img src="images/ux.jpg" alt="Gallery image 2" class="img-fluid align-middle gallery_item"></a>
+                <img src="images/ux.jpg" alt="Gallery image 2" class="img-fluid align-middle gallery_item">
             </div>
         </div>
         <div class="col container">
             <div class="item p-1 mt-4 mx-auto" data-aos="fade-left" data-aos-duration="1500">
                 <h4 class="item_heading">Musseles house Varna</h4>
-                <a href="#"><img src="images/musselesHouse.jpg" alt="Gallery image 2" class="img-fluid align-middle gallery_item"></a>
+                <img src="images/musselesHouse.jpg" alt="Gallery image 2" class="img-fluid align-middle gallery_item">
             </div>
             <div class="item p-1 mt-4 mx-auto" data-aos="fade-left" data-aos-duration="1500">
                 <h4 class="item_heading">Rekar plast 2006</h4>
-                <a href="http://rekarplast.com/"><img src="images/rekar.png" alt="Gallery image 1" class="img-fluid align-middle gallery_item"></a>
+                <img src="images/rekar.png" alt="Gallery image 1" class="img-fluid align-middle gallery_item">
             </div>
             <div class="item p-1 mt-4 mx-auto" data-aos="fade-left" data-aos-duration="1500">
                 <h4 class="item_heading">EndGame</h4>
-                <a href="http://rekarplast.com/"><img src="images/endgame1.png" alt="Gallery image 1" class="img-fluid align-middle gallery_item"></a>
+                <img src="images/endgame1.png" alt="Gallery image 1" class="img-fluid align-middle gallery_item">
             </div>
         </div>
     </div>

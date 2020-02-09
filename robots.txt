@@ -1,0 +1,24 @@
+User-agent: *
+Disallow: /e52e7ce4ac2458867d05eaad577560db/*
+Disallow: /images/*
+Disallow: /uploads/*
+Disallow: /inc/*
+Disallow: /js/*
+Disallow: /templates/*
+
+User-agent: 008
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: Synthesio
+Disallow: /
+
+Sitemap: https://hhbsecure-taxi.com/sitemap.xml

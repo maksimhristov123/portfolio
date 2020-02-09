@@ -39,8 +39,11 @@
     </nav>
 
     <div class="hero_content rellax">
+        <div class="container">
         <p class="prof">Здравейте!</p>
         <h1 class="hero_head">Аз съм Максим Христов</h1>
         <p class="slog">Web Developer и Web Designer.</p>
+
+        </div>
     </div>
 </div>

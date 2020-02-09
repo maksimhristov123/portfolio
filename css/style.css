@@ -183,6 +183,7 @@ section {
 
 /*********************************************************************************************************************/
 .hero {
+    position: relative;
     background-color: #303030;
     background: linear-gradient(217deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0)), url("../images/me3.jpg");
     background-position: center;
@@ -226,7 +227,7 @@ section {
     top: 25%;
     left: 10%;
     -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); 
 }
 
 .hero_head {
@@ -430,11 +431,13 @@ section {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
 }
 
 .fr-section {
     background-image: url(../images/mockup.jpg);
+    background-repeat: no-repeat;
     background-position: 70vh;
 }
 
@@ -566,14 +569,17 @@ section {
 
 #serv_1 .half_scr_img {
     background-image: url(../images/dolar.jpg);
+    background-repeat: no-repeat;
 }
 
 #serv_2 .half_scr_img {
     background-image: url(../images/design.jpg);
+    background-repeat: no-repeat;
 }
 
 #serv_3 .half_scr_img {
     background-image: url(../images/baby.jpg);
+    background-repeat: no-repeat;
 }
 
 /***************************************************************************FOOTER**************************************************************************************/
@@ -617,6 +623,7 @@ footer ul li a:hover {
 .varna {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 237, 229, .5)), to(rgba(240, 237, 229, .3))), url(../images/varna.jpg);
     background-image: linear-gradient(rgba(240, 237, 229, .5), rgba(240, 237, 229, .3)), url(../images/varna.jpg);
+    background-repeat: no-repeat;
 }
 
 .section_content_ld {

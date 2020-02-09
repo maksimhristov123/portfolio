@@ -133,7 +133,7 @@
         <div class="col pb-5 mb-5">
             <h4 class="descr pt-5 mt-5">Да подновим стария Ви сайт!</h4>
             <div>
-                <p class="intro_text container text-justify pt-5 mt-5"><span>У</span></p>
+                <p class="intro_text container text-justify pt-5 mt-5"><span>Да съьивим старият </span></p>
                 <div class="btn_cont"> <a href="?page=contacts" class="buts ">Контакти</a></div>
             </div>
         </div>
