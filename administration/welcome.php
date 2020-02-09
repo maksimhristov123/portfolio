@@ -1,82 +1,18 @@
-<!Doctype html>
-<html lang="bg">
-<?php 
-    session_start();
+<?php
+$site_url = 'http://' . $_SERVER['HTTP_HOST'];
+
+require_once ('templates/header.php');
+if (isset($_GET['page'])) {
+    $page = $_GET['page'];
+    $file = "inc/" .$page. ".php";
+    if (file_exists($file)) {
+        require_once $file;
+    }else {
+        require_once ('inc/home.php');
+    }
+}else {
+    require_once ('inc/home.php');
+}
+require_once ('templates/footer.php');
+
 ?>
-
-<head>
-<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--  Global css -->
-    <link rel="stylesheet" href="css/admin.css">
-    <!-- <link rel="shortcut icon" href="favicon.ico" /> -->
-
-    <!-- Fontawesome -->
-    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto&display=swap" rel="stylesheet">
-    <!-- Bootstrap css -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-
-    <!-- Bootstrap js -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-    <!-- Custom js
-    <script src="js/script.js" type="text/javascript"></script> -->
-
-    <title>Здравей, <?php echo $_SESSION['full_name']; ?>!</title>
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg admin_menu d-flex justify-content-between w-100 shadow-lg">
-        <a class="navbar-brand" href="#" id="brand"><img src="admin_images/me-logo.png" class="img-fluid my-2" alt="Maksim Hristov's Portfolio Logo" width="100"></a>
-        
-        <span class="navbar-text">
-            <p class="welcome my-auto pr-4">Welcome, <?php echo $_SESSION['full_name']; ?> </p>
-        </span>
-    </nav>
-
-    <section>
-            <div class="row">
-                <div class="col-2 vertical_menu p-5 shadow-lg">
-                    <nav class="navbar">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                            <a href="#"><?php echo $_SESSION['full_name']; ?></a><i class="fas fa-chevron-left"></i>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
-                            <a class="nav-item nav-link" href="#"><i class="fas fa-user"></i>My profile</a>
-                            <a class="nav-item nav-link" href="#"><i class="fas fa-user-cog"></i>Settings</a>
-                            <a><form action="inc/logout.php" method="post">
-                                    <button type="submit" name="logout" class="bg-transparent border-0"><i class="fas fa-door-open"></i>Logout</button>
-                                </form></a>
-                            </div>
-                        </div>
-                    </nav>
-
-                    <ul>
-                        <li><a href="#"><i class="fas fa-chart-pie"></i></i>Dashboard</a></li>
-                        <li><a href="inc/projects.php"><i class="fas fa-project-diagram"></i>Projects</a></li>
-                        <li><a href="inc/articles.php"><i class="fas fa-cube"></i>Blog</a></li>
-                    </ul>
-                </div>
-                <div class="col-10 content_welcomePage">
-                    <div class="page_heading">
-                        <h2>Здравей, <?php echo $_SESSION['full_name']; ?></h2>
-                    </div>
-                </div>
-        </div>
-    </section>
-
-    <footer class="w-100 p-2 fixed-bottom shadow-lg">
-            <span>&copy; <?php echo date("Y"); ?> Maxim Hristov </span>
-    </footer>
-
-
-</body>
-</html>

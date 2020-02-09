@@ -65,11 +65,11 @@
             <p class="text">Login</p>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" require>
+                <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" autocomplete="off" require>
             </div>
             <div class="form-group">
                 <label for="pass">Password:</label>
-                <input type="password" class="form-control" name="pass" id="pass" require>
+                <input type="password" class="form-control" name="pass" id="pass" autocomplete="off"  require>
             </div>
             <button type="submit" name="submit" class="btn btn-primary">Вход</button>
         </form>

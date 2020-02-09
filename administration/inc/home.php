@@ -1,0 +1,1 @@
+<p class="welcome my-auto pr-4">Welcome, <?php echo $_SESSION['full_name']; ?> </p>
